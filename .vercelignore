@@ -1,0 +1,6 @@
+# Working material and build tooling: not served on the site
+raw/
+shots/
+build.ps1
+src.html
+README.md

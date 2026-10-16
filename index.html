@@ -1,0 +1,2109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Petit Muu Braseria · Carne a la brasa en l'Eixample, Barcelona</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta name="description" content="Brasería en la Plaça del Doctor Letamendi (Eixample, Barcelona). Chuletón madurado hasta 60 días, Wagyu A5 y el cachopo más comentado, a la brasa de carbón natural. 9,3 en TheFork con 1.227 opiniones. Reserva el Menú Fuego.">
+<meta name="theme-color" content="#141312">
+<meta property="og:title" content="Petit Muu Braseria · Aquí la carne se respeta">
+<meta property="og:description" content="Chuletón madurado, Wagyu A5 y cachopo a la brasa en la Plaça Letamendi. 9,3 en TheFork, 4,7 en Google.">
+<meta property="og:image" content="img/hero-mesa.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Petit Muu Braseria","image":"img/hero-mesa.jpg","url":"https://petitmuu.es/","telephone":"+34608633036","email":"braseriapetitmuu@gmail.com","servesCuisine":["Brasería","Carne a la brasa","Tapas"],"priceRange":"€€","acceptsReservations":"True","address":{"@type":"PostalAddress","streetAddress":"Plaça del Doctor Letamendi, 28","addressLocality":"Barcelona","postalCode":"08007","addressRegion":"Catalunya","addressCountry":"ES"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday"],"opens":"12:30","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday","Sunday"],"opens":"12:30","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"19:30","closes":"23:30"}],"sameAs":["https://www.instagram.com/petit__muu/","https://www.thefork.es/restaurante/petit-muu-r842827"]}
+</script>
+<style>
+  /* Taken from Petit Muu itself: the tan of the round logo, the rust of their "Reservas" button,
+     the peach band and the sage green of their current site (which is also the green of the tiled
+     walls inside), and Roboto Slab, their headline face. The fire sections go charcoal so the meat glows.
+     Tokens are per-surface: .dark and .sage redefine --bg/--fg/--muted/--line/--panel/--accent,
+     so every component reads the right colours wherever it sits.
+     Radius rule: panels 24px, media inside 16px, buttons and chips full pill. */
+  :root {
+    --paper: #fbf4ec;
+    --peach: #ffe9d2;
+    --char: #141312;
+    --char-2: #1c1a18;
+    --sage-c: #587560;
+    --sage-d: #3e5545;
+    --rust: #a1562a;
+    --rust-2: #b8652f;
+    --ember: #e8894c;
+    --tan: #cbbb9f;
+    --bg: var(--paper);
+    --fg: #1d1e20;
+    --muted: #675d54;
+    --line: rgba(29, 30, 32, .12);
+    --panel: #fffaf4;
+    --accent: var(--rust);
+    --shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 24px 60px -30px rgba(60,30,10,.35);
+    --shadow-lg: 0 40px 90px -36px rgba(30,15,5,.6);
+    --r: 24px;
+    --r-sm: 16px;
+    --ease: cubic-bezier(.22, 1, .36, 1);
+    --display: "Roboto Slab", Rockwell, Georgia, serif;
+    --body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --wrap: 1200px;
+    --gut: clamp(16px, 4vw, 40px);
+  }
+  .dark { --bg: var(--char); --fg: #f6ede3; --muted: #b5a99b; --line: rgba(246,237,227,.12); --panel: var(--char-2); --accent: var(--ember); --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 24px 60px -24px rgba(0,0,0,.8); color-scheme: dark; }
+  .sage { --bg: var(--sage-c); --fg: #fbf4ec; --muted: #dfe6dc; --line: rgba(251,244,236,.2); --panel: var(--sage-d); --accent: var(--tan); }
+  .peach { --bg: var(--peach); --panel: #fff6ec; }
+  .dark, .sage, .peach { background: var(--bg); color: var(--fg); }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; background: var(--paper); }
+  body { margin: 0; background: var(--paper); color: var(--fg); font: 400 1.0625rem/1.6 var(--body); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: clip; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  h1, h2, h3 { margin: 0; text-wrap: balance; font-family: var(--display); }
+  h2 { font-weight: 800; font-size: clamp(2.3rem, 1.3rem + 3.6vw, 4.6rem); line-height: 1; letter-spacing: -0.025em; }
+  h2 .hl, h1 .hl { color: var(--accent); }
+  h3 { font-weight: 700; font-size: 1.45rem; line-height: 1.15; letter-spacing: -0.01em; }
+  p { margin: 0; text-wrap: pretty; }
+  .wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gut); }
+  .section { padding-block: clamp(88px, 11vw, 160px); }
+  .center { text-align: center; }
+  .center .lead { margin-inline: auto; }
+  h2 + .lead { margin-top: 22px; }
+  .lead { font-size: clamp(1.1rem, 1rem + .35vw, 1.27rem); line-height: 1.55; color: var(--muted); max-width: 54ch; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font: 700 .76rem/1 var(--body); letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+  .eyebrow::before { content: ""; width: 26px; height: 1.5px; background: currentColor; }
+  .center .eyebrow::after { content: ""; width: 26px; height: 1.5px; background: currentColor; }
+  .ic { width: 1.25em; height: 1.25em; flex: none; fill: currentColor; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .55em; padding: 1em 1.55em; border-radius: 999px; font: 600 1rem/1 var(--body); text-decoration: none; white-space: nowrap; border: 0; cursor: pointer; transition: transform .45s var(--ease), background-color .2s, box-shadow .45s var(--ease), color .2s; }
+  .btn:active { transform: scale(.97); transition-duration: .1s; }
+  .btn-fire { background: var(--rust); color: #fff; box-shadow: 0 12px 30px -12px rgba(161,86,42,.75); }
+  .btn-fire:hover { background: var(--rust-2); box-shadow: 0 16px 40px -12px rgba(184,101,47,.85); }
+  .btn-ghost { color: var(--fg); background: transparent; box-shadow: inset 0 0 0 1.5px var(--line); }
+  .btn-ghost:hover { box-shadow: inset 0 0 0 1.5px currentColor; }
+  .btn-dark { background: var(--fg); color: var(--bg); }
+  .btn-dark:hover { opacity: .9; }
+  .btn .ic { width: 1.15em; height: 1.15em; }
+  .btn .price { padding-left: .7em; margin-left: .15em; border-left: 1px solid rgba(255,255,255,.35); font-variant-numeric: tabular-nums; }
+  .link { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-weight: 600; text-decoration: none; }
+  .link:hover { text-decoration: underline; text-underline-offset: 4px; }
+  :focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; border-radius: 8px; }
+
+  /* Header: charcoal translucent material, always */
+  .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; color: #f6ede3; background: rgba(20, 19, 18, .66); backdrop-filter: saturate(160%) blur(18px); -webkit-backdrop-filter: saturate(160%) blur(18px); transition: box-shadow .3s, background-color .3s; }
+  .top.scrolled { box-shadow: 0 1px 0 rgba(246,237,227,.1); background: rgba(20, 19, 18, .86); }
+  .top .wrap { display: flex; align-items: center; gap: 26px; height: 70px; }
+  .logo { display: flex; align-items: center; gap: 12px; flex: none; text-decoration: none; }
+  .logo img { height: 50px; width: 50px; }
+  .logo span { font: 800 1.05rem/1 var(--display); letter-spacing: .02em; }
+  .logo small { display: block; font: 600 .62rem/1 var(--body); letter-spacing: .28em; color: var(--tan); margin-top: 5px; }
+  .nav { display: flex; gap: 24px; margin-left: auto; }
+  .nav a { text-decoration: none; font-size: .9rem; font-weight: 500; opacity: .74; transition: opacity .2s, color .2s; }
+  .nav a:hover { opacity: 1; color: var(--ember); }
+  .top .btn { padding: .74em 1.15em; font-size: .88rem; }
+  .menu-btn { display: none; width: 44px; height: 44px; border-radius: 999px; border: 0; background: transparent; color: inherit; place-items: center; cursor: pointer; }
+  .menu-btn .ic { width: 24px; height: 24px; }
+  .mobile-nav { display: none; }
+  @media (max-width: 1080px) {
+    .nav, .top .btn { display: none; }
+    .menu-btn { display: grid; }
+    .mobile-nav { padding: 6px var(--gut) 28px; }
+    .mobile-nav.open { display: grid; }
+    .mobile-nav a { padding: 12px 0; text-decoration: none; font: 800 1.9rem/1.1 var(--display); border-bottom: 1px solid rgba(246,237,227,.12); }
+  }
+  @media (max-width: 420px) { .logo span { display: none; } }
+  @media (prefers-reduced-transparency: reduce) { .top, .bar { background: var(--char); backdrop-filter: none; -webkit-backdrop-filter: none; } }
+
+  .lang { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; background: rgba(246,237,227,.08); flex: none; }
+  .lang button { font: 600 .72rem/1 var(--body); letter-spacing: .06em; color: #b5a99b; background: transparent; border: 0; padding: .6em .72em; border-radius: 999px; cursor: pointer; transition: background-color .25s, color .25s; }
+  .lang button:hover { color: #fff; }
+  .lang button[aria-pressed="true"] { background: var(--tan); color: #1d1e20; }
+  @media (max-width: 1080px) { .lang { margin-left: auto; } }
+
+  /* Hero: charcoal, ember glow and rising sparks */
+  .hero { position: relative; padding-top: clamp(44px, 6vw, 84px); overflow: hidden; isolation: isolate; }
+  .hero::before { content: ""; position: absolute; inset: auto -20% -30% -20%; height: 90%; z-index: -2; background: radial-gradient(50% 55% at 50% 100%, rgba(232,137,76,.38), rgba(161,86,42,.14) 45%, transparent 72%); pointer-events: none; }
+  .sparks { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+  .hero-copy { text-align: center; }
+  .hero h1 { font-weight: 900; font-size: clamp(3rem, 1rem + 7.6vw, 8rem); line-height: .94; letter-spacing: -0.035em; max-width: 12ch; margin-inline: auto; }
+  .hero h1 .hl { color: var(--ember); position: relative; white-space: nowrap; }
+  .hero .lead { margin: 28px auto 0; max-width: 46ch; color: #d8ccbf; }
+  .hero .ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 34px; }
+  .hero .btn-ghost { color: #f6ede3; box-shadow: inset 0 0 0 1.5px rgba(246,237,227,.3); }
+  .rating { display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 14px; margin-top: 26px; font-size: .9rem; color: var(--muted); }
+  .rating .stars { display: inline-flex; gap: 2px; color: var(--ember); }
+  .rating .stars .ic { width: 15px; height: 15px; }
+  .rating b { color: var(--fg); font-weight: 600; }
+  .rating .dot { width: 4px; height: 4px; border-radius: 9px; background: var(--muted); opacity: .5; }
+
+  .trio { display: grid; grid-template-columns: 1fr 1.55fr 1fr; gap: clamp(12px, 2vw, 24px); align-items: end; margin-top: clamp(52px, 6vw, 80px); }
+  .trio > img { width: 100%; object-fit: cover; border-radius: var(--r); box-shadow: var(--shadow-lg); aspect-ratio: 4 / 5; margin-bottom: clamp(24px, 4vw, 56px); }
+  .trio .t2 { position: relative; aspect-ratio: 4 / 4.3; border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-lg); will-change: transform; }
+  .trio .t2 img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
+  .trio .t2 .veil { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,8,6,.88), rgba(10,8,6,.4)); opacity: 0; }
+  @media (max-width: 760px) {
+    .trio { grid-template-columns: 1fr 1fr; }
+    .trio .t2 { grid-column: span 2; order: -1; aspect-ratio: 4 / 3.8; }
+    .trio > img { margin-bottom: 0; aspect-ratio: 1; }
+  }
+  .stage-cap { display: none; }
+  html.motion .stage-cap { display: grid; place-items: center; position: absolute; top: 0; left: 0; right: 0; height: 100vh; height: 100dvh; z-index: 3; pointer-events: none; text-align: center; padding: var(--gut); }
+  .stage-cap p { font: 900 clamp(2.8rem, 1.2rem + 5.4vw, 6.6rem)/.95 var(--display); letter-spacing: -0.03em; color: #f6ede3; max-width: 13ch; opacity: 0; text-wrap: balance; }
+  .stage-cap small { display: block; margin-top: 22px; font: 500 1.15rem/1.4 var(--body); letter-spacing: 0; color: rgba(246,237,227,.85); }
+  .stage-cap .em { color: var(--ember); }
+
+  /* Ticker */
+  .ticker { position: relative; overflow: hidden; padding-block: 22px; border-block: 1px solid var(--line); }
+  .ticker .row { display: flex; width: max-content; animation: tick 40s linear infinite; }
+  .ticker span { display: inline-flex; align-items: center; gap: 28px; padding-right: 28px; font: 800 clamp(1.5rem, 1rem + 1.8vw, 2.4rem)/1 var(--display); letter-spacing: -0.01em; color: transparent; -webkit-text-stroke: 1.1px rgba(246,237,227,.45); white-space: nowrap; }
+  .ticker span .ic { width: 22px; height: 22px; color: var(--ember); -webkit-text-stroke: 0; }
+  .ticker span b { color: #f6ede3; -webkit-text-stroke: 0; font-weight: 800; }
+  @keyframes tick { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .ticker .row { animation: none; } }
+
+  /* Proof numbers */
+  .proof .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+  .proof strong { display: block; font: 900 clamp(3.2rem, 2.2rem + 3.4vw, 5.6rem)/.9 var(--display); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+  .proof strong em { font-style: normal; color: var(--accent); font-size: .5em; vertical-align: .7em; margin-left: .06em; }
+  .proof span { display: block; margin: 14px auto 0; color: var(--muted); font-size: .98rem; line-height: 1.4; max-width: 22ch; }
+  .proof .src { display: inline-flex; margin-top: 12px; padding: .35em .8em; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); font: 700 .72rem/1.2 var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+  @media (max-width: 860px) { .proof .wrap { grid-template-columns: 1fr 1fr; row-gap: 52px; } }
+
+  /* Offer: Menú Fuego, scroll story with a sticky photo */
+  .offer-head { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(32px, 6vw, 96px); align-items: end; }
+  .offer-head .lead { margin-top: 0; }
+  .story { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 96px); margin-top: 64px; }
+  .story-media { position: sticky; top: 100px; height: calc(100dvh - 150px); max-height: 740px; }
+  .frame { position: relative; height: 100%; border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-lg); background: var(--char); }
+  .frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.08); transition: opacity .9s var(--ease), transform 1.6s var(--ease); }
+  .frame img.on { opacity: 1; transform: none; }
+  .frame::after { content: ""; position: absolute; inset: auto 0 0; height: 40%; background: linear-gradient(to top, rgba(10,8,6,.75), transparent); pointer-events: none; }
+  .frame .count { position: absolute; left: 26px; bottom: 24px; z-index: 2; color: #f6ede3; font: 800 1.3rem/1 var(--display); font-variant-numeric: tabular-nums; }
+  .frame .count b { color: var(--ember); }
+  .story-steps { list-style: none; margin: 0; padding: 0; }
+  .story-steps li { min-height: 52vh; display: grid; grid-template-columns: 56px 1fr; gap: 20px; align-content: center; transition: opacity .6s var(--ease); }
+  .story-steps li:first-child { min-height: 38vh; align-content: start; padding-top: 6vh; }
+  html.motion .story-steps li { opacity: .25; }
+  html.motion .story-steps li.on { opacity: 1; }
+  .story-steps .n { width: 56px; height: 56px; border-radius: 999px; display: grid; place-items: center; font: 800 1.35rem/1 var(--display); color: var(--rust); box-shadow: inset 0 0 0 1.5px rgba(161,86,42,.5); transition: background-color .5s, color .5s; }
+  .story-steps li.on .n { background: var(--rust); color: #fff; }
+  .story-steps h3 { font-size: clamp(1.8rem, 1.3rem + 1.4vw, 2.6rem); line-height: 1.02; letter-spacing: -0.02em; font-weight: 800; }
+  .story-steps p { margin-top: 12px; color: var(--muted); font-size: 1.1rem; max-width: 40ch; }
+  .story-steps .tag { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; padding: .45em .9em; border-radius: 999px; background: rgba(161,86,42,.1); color: var(--rust); font-size: .85rem; font-weight: 600; }
+  .story-steps .tag .ic { width: 15px; height: 15px; }
+  .story-steps .m { display: none; }
+  @media (max-width: 900px) {
+    .offer-head { grid-template-columns: 1fr; }
+    .story { grid-template-columns: 1fr; margin-top: 40px; }
+    .story-media { display: none; }
+    .story-steps li, .story-steps li:first-child { min-height: 0; padding: 0 0 44px; align-content: start; grid-template-columns: 48px 1fr; gap: 16px; }
+    .story-steps .n { width: 48px; height: 48px; font-size: 1.2rem; }
+    html.motion .story-steps li { opacity: 1; }
+    .story-steps .m { display: block; grid-column: 1 / -1; width: 100%; aspect-ratio: 16 / 11; object-fit: cover; border-radius: var(--r-sm); margin-top: 18px; }
+  }
+
+  /* Value stack */
+  .deal { display: grid; grid-template-columns: 1.1fr .9fr; margin-top: 56px; border-radius: var(--r); overflow: hidden; background: var(--panel); box-shadow: var(--shadow); border: 1px solid var(--line); }
+  .deal-list { padding: clamp(28px, 4vw, 52px); }
+  .deal-list h3 { font-size: 2rem; font-weight: 800; }
+  .deal-list ul { list-style: none; padding: 0; margin: 24px 0 0; }
+  .deal-list li { display: grid; grid-template-columns: 26px 1fr auto; gap: 14px; align-items: baseline; padding: 14px 0; border-top: 1px dashed var(--line); }
+  .deal-list li .ic { color: var(--rust); width: 20px; height: 20px; transform: translateY(4px); }
+  .deal-list li span:last-child { font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+  .deal-list li em { font-style: normal; color: var(--rust); font-weight: 700; }
+  .deal-list li small { display: block; color: var(--muted); font-size: .85rem; }
+  .deal-pay { position: relative; display: grid; align-content: center; gap: 8px; padding: clamp(28px, 4vw, 52px); background: radial-gradient(120% 90% at 100% 0%, rgba(232,137,76,.3), transparent 60%), var(--char); color: #f6ede3; text-align: center; }
+  .deal-pay .was { color: #b5a99b; font-size: 1rem; }
+  .deal-pay .was s { color: #f6ede3; }
+  .deal-pay .now { font: 900 clamp(5rem, 3rem + 6vw, 8.4rem)/.85 var(--display); letter-spacing: -0.04em; color: var(--ember); }
+  .deal-pay .now small { font-size: .38em; vertical-align: 1em; margin-left: 6px; letter-spacing: 0; }
+  .deal-pay .per { font: 700 1rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--tan); }
+  .deal-pay p { color: #cbbfb2; max-width: 30ch; margin: 10px auto 18px; }
+  .deal-pay .btn { justify-self: center; }
+  .deal-pay .fine { font-size: .8rem; color: #a3978a; margin-top: 14px; }
+  .ups { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
+  .ups span { display: inline-flex; align-items: center; gap: 6px; padding: .5em .9em; border-radius: 999px; border: 1px solid rgba(246,237,227,.18); font-size: .82rem; color: #e9dccd; }
+  .ups b { color: var(--ember); }
+  @media (max-width: 860px) { .deal { grid-template-columns: 1fr; } }
+
+  .guarantee { margin-top: 24px; display: grid; grid-template-columns: auto 1fr; gap: 26px; align-items: center; border-radius: var(--r); padding: 30px 34px; background: var(--panel); border: 1px solid rgba(161,86,42,.35); }
+  .seal { position: relative; width: 96px; height: 96px; display: grid; place-items: center; color: var(--rust); }
+  .seal svg.ring { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 18s linear infinite; }
+  .seal svg.ring text { font: 700 9.2px/1 var(--body); letter-spacing: 2.1px; fill: var(--rust); text-transform: uppercase; }
+  .seal .ic { width: 34px; height: 34px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .seal svg.ring { animation: none; } }
+  .guarantee h3 { font-size: 1.7rem; font-weight: 800; }
+  .guarantee p { color: var(--muted); margin-top: 6px; max-width: 66ch; }
+  @media (max-width: 640px) { .guarantee { grid-template-columns: 1fr; } }
+
+  /* La Cámara: pick the cut and the weight */
+  .camara { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 72px); align-items: center; margin-top: 56px; }
+  .cuts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .cuts button { display: grid; gap: 6px; text-align: left; padding: 14px; border-radius: var(--r-sm); background: var(--panel); border: 1.5px solid var(--line); color: var(--fg); cursor: pointer; transition: border-color .25s, background-color .25s, transform .3s var(--ease); }
+  .cuts button:active { transform: scale(.97); }
+  .cuts button b { font: 700 1.02rem/1.1 var(--display); }
+  .cuts button small { color: var(--muted); font-size: .78rem; line-height: 1.3; }
+  .cuts button[aria-pressed="true"] { border-color: var(--ember); background: rgba(232,137,76,.12); }
+  .cut-photo { position: relative; aspect-ratio: 4 / 4.6; border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-lg); background: #000; }
+  .cut-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity .8s var(--ease), transform 1.4s var(--ease); }
+  .cut-photo img.on { opacity: 1; transform: none; }
+  .cut-photo .days { position: absolute; z-index: 2; right: 18px; top: 18px; display: grid; place-items: center; width: 108px; height: 108px; border-radius: 999px; background: rgba(20,19,18,.72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(246,237,227,.18); text-align: center; }
+  .cut-photo .days b { display: block; font: 900 2.4rem/.9 var(--display); color: var(--ember); }
+  .cut-photo .days span { display: block; font: 600 .66rem/1.2 var(--body); letter-spacing: .12em; text-transform: uppercase; color: #e9dccd; margin-top: 4px; }
+  .cut-info { margin-top: 26px; }
+  .cut-info h3 { font-size: clamp(1.8rem, 1.3rem + 1.4vw, 2.5rem); font-weight: 800; letter-spacing: -0.02em; }
+  .cut-info > p { color: var(--muted); margin-top: 10px; min-height: 3.2em; }
+  .meters { display: grid; gap: 10px; margin-top: 20px; }
+  .meter { display: grid; grid-template-columns: 130px 1fr; align-items: center; gap: 14px; font-size: .9rem; color: var(--muted); }
+  .meter i { display: flex; gap: 5px; }
+  .meter i span { flex: 1; height: 6px; border-radius: 6px; background: rgba(246,237,227,.1); transition: background-color .5s var(--ease); }
+  .meter i span.on { background: var(--ember); }
+  .weights { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .weights button { font: 600 .95rem/1 var(--body); padding: .8em 1.1em; border-radius: 999px; background: transparent; color: var(--fg); border: 1.5px solid var(--line); cursor: pointer; font-variant-numeric: tabular-nums; transition: border-color .25s, background-color .25s, color .25s; }
+  .weights button[aria-pressed="true"] { background: var(--tan); border-color: var(--tan); color: #1d1e20; }
+  .cut-total { display: flex; align-items: end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .cut-total .p { font: 900 clamp(3rem, 2.2rem + 2.4vw, 4.4rem)/.85 var(--display); letter-spacing: -0.03em; color: var(--ember); font-variant-numeric: tabular-nums; }
+  .cut-total .pp { color: var(--muted); font-size: .92rem; margin-top: 8px; }
+  @media (max-width: 960px) { .camara { grid-template-columns: 1fr; } .cuts { grid-template-columns: repeat(2, 1fr); } .cut-photo { aspect-ratio: 4 / 3.6; } }
+
+  /* Star dish: cachopo */
+  .star { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
+  .star-media { position: relative; }
+  .star-media .big { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r); box-shadow: var(--shadow-lg); }
+  .star-media .small { position: absolute; width: 42%; aspect-ratio: 1; object-fit: cover; right: -6%; bottom: -8%; border-radius: var(--r-sm); border: 6px solid var(--bg); box-shadow: var(--shadow-lg); will-change: transform; }
+  .stamp { position: absolute; left: -18px; top: 28px; display: grid; place-items: center; width: 132px; height: 132px; border-radius: 999px; background: var(--rust); color: #fff; text-align: center; transform: rotate(-10deg); box-shadow: 0 20px 40px -16px rgba(0,0,0,.6); }
+  .stamp b { display: block; font: 900 2.8rem/.85 var(--display); }
+  .stamp span { display: block; font: 600 .68rem/1.25 var(--body); letter-spacing: .06em; text-transform: uppercase; margin-top: 4px; padding-inline: 14px; }
+  .star .lead { color: var(--muted); }
+  .star .tick { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 12px; }
+  .star .tick li { display: flex; gap: 12px; align-items: baseline; }
+  .star .tick .ic { color: var(--accent); width: 18px; height: 18px; transform: translateY(3px); }
+  .star blockquote { margin: 28px 0 0; padding-left: 18px; border-left: 2px solid var(--accent); font-size: 1.05rem; }
+  .star blockquote cite { display: block; margin-top: 8px; font-style: normal; font-size: .88rem; color: var(--muted); }
+  .star .row { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 32px; }
+  .star .row .pr { font: 900 2.6rem/1 var(--display); letter-spacing: -0.02em; }
+  @media (max-width: 900px) { .star { grid-template-columns: 1fr; } .star-media { margin: 0 6% 40px 0; } .stamp { left: -6px; width: 112px; height: 112px; } .stamp b { font-size: 2.3rem; } }
+
+  /* Menu board */
+  .carta-head { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(28px, 5vw, 72px); align-items: end; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 40px; }
+  .tabs button { font: 600 .92rem/1 var(--body); color: var(--muted); background: var(--panel); border: 1px solid var(--line); padding: .85em 1.25em; border-radius: 999px; cursor: pointer; transition: background-color .3s, color .3s, border-color .3s; }
+  .tabs button:hover { color: var(--fg); }
+  .tabs button[aria-selected="true"] { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+  .board { position: relative; margin-top: 18px; padding: clamp(24px, 4vw, 52px); border-radius: var(--r); background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .board-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 64px; }
+  .item { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 16px 0; border-bottom: 1px dashed var(--line); }
+  .item[hidden] { display: none; }
+  .item .name { display: flex; align-items: baseline; gap: 12px; font: 700 1.08rem/1.25 var(--display); }
+  .item .name::after { content: ""; flex: 1; border-bottom: 2px dotted rgba(29,30,32,.18); transform: translateY(-4px); min-width: 20px; }
+  .item .p { font: 800 1.1rem/1.25 var(--display); color: var(--rust); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .item .d { grid-column: 1 / -1; color: var(--muted); font-size: .9rem; line-height: 1.45; }
+  .item .badge { display: inline-flex; padding: .3em .7em; border-radius: 999px; background: var(--rust); color: #fff; font: 700 .66rem/1.2 var(--body); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+  .board-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; margin-top: 28px; color: var(--muted); font-size: .95rem; }
+  .board.anim .item:not([hidden]) { animation: rise .6s var(--ease) both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+  @media (prefers-reduced-motion: reduce) { .board.anim .item:not([hidden]) { animation: none; } }
+  @media (max-width: 860px) { .board-grid { grid-template-columns: 1fr; } .carta-head { grid-template-columns: 1fr; } }
+
+  /* Full-bleed scene */
+  .scene { position: relative; min-height: 100vh; min-height: 100dvh; display: grid; align-items: end; overflow: hidden; isolation: isolate; color: #f6ede3; will-change: transform; }
+  .scene > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; will-change: transform; }
+  .scene::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgba(12,10,8,.94) 0%, rgba(12,10,8,.55) 45%, rgba(12,10,8,.15) 100%); }
+  .scene .inner { padding-inline: max(var(--gut), calc((100vw - var(--wrap)) / 2 + var(--gut))); padding-block: clamp(64px, 10vw, 140px); }
+  .scene h2 { max-width: 14ch; }
+  .scene .eyebrow { color: var(--tan); }
+  .scene .lead { color: #ddd1c4; margin-top: 22px; }
+  .chips { list-style: none; padding: 0; margin: 30px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .chips li { display: inline-flex; align-items: center; gap: 8px; padding: .65em 1.1em; border-radius: 999px; background: rgba(246,237,227,.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(246,237,227,.18); font-weight: 500; font-size: .95rem; }
+  .chips li .ic { color: var(--ember); width: 18px; height: 18px; }
+
+  /* Gallery: concave carousel */
+  .works { padding-block: clamp(88px, 11vw, 160px) 0; overflow: hidden; }
+  .works-head { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; }
+  .htrack-wrap { margin-top: 48px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: clamp(88px, 11vw, 160px); }
+  .htrack-wrap::-webkit-scrollbar { display: none; }
+  .htrack { display: flex; gap: 18px; width: max-content; padding-inline: max(var(--gut), calc((100vw - var(--wrap)) / 2 + var(--gut))); }
+  .htrack figure { position: relative; margin: 0; flex: none; width: clamp(260px, 26vw, 380px); aspect-ratio: 3 / 4; border-radius: var(--r); overflow: hidden; scroll-snap-align: center; background: var(--panel); }
+  .htrack figure img { width: 100%; height: 100%; object-fit: cover; }
+  .htrack figcaption { position: absolute; left: 16px; bottom: 14px; right: 16px; font: 700 1rem/1.2 var(--display); color: #f6ede3; text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+  .cc-foot { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding-bottom: clamp(88px, 11vw, 160px); }
+  .cc-n { font: 800 1.4rem/1 var(--display); color: var(--fg); font-variant-numeric: tabular-nums; min-width: 6ch; }
+  .cc-arrows { display: none; gap: 10px; }
+  .cc-arrows button { width: 54px; height: 54px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--fg); display: grid; place-items: center; cursor: pointer; transition: background-color .25s, color .25s, transform .2s; }
+  .cc-arrows button:hover { background: var(--ember); color: #1d1e20; }
+  .cc-arrows button:active { transform: scale(.94); }
+  .cc-arrows .cc-prev .ic { transform: rotate(180deg); }
+  .cc-cta { display: flex; align-items: center; gap: 18px; }
+  .cc-cta > span { font: 800 1.3rem/1 var(--display); }
+  .cc-on .htrack-wrap { position: relative; height: clamp(440px, 66vh, 680px); margin-top: 28px; padding: 0; overflow: hidden; scroll-snap-type: none; perspective: 900px; perspective-origin: 50% 50%; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); }
+  .cc-on .htrack-wrap.grabbing { cursor: grabbing; }
+  .cc-on .htrack-wrap:focus-visible { outline: 2px solid var(--ember); outline-offset: -2px; }
+  .cc-on .htrack { position: absolute; inset: 0; width: auto; padding: 0; display: block; transform-style: preserve-3d; }
+  .cc-on .htrack figure { position: absolute; left: 50%; top: 50%; width: var(--cw, 300px); height: calc(var(--cw, 300px) * 4 / 3); margin: calc(var(--cw, 300px) * -2 / 3) 0 0 calc(var(--cw, 300px) / -2); aspect-ratio: auto; backface-visibility: hidden; -webkit-backface-visibility: hidden; will-change: transform, opacity; box-shadow: 0 30px 60px -30px rgba(0,0,0,.9); cursor: pointer; }
+  .cc-on .htrack figure::after { content: ""; position: absolute; inset: 0; background: #0a0806; opacity: var(--dim, 0); pointer-events: none; border-radius: inherit; }
+  .cc-on .htrack figure.front { box-shadow: 0 0 0 1.5px rgba(232,137,76,.75), 0 40px 80px -30px rgba(0,0,0,.95); cursor: grab; }
+  .cc-on .htrack figure img { pointer-events: none; -webkit-user-drag: none; }
+  .cc-on .htrack figcaption { z-index: 1; }
+  .cc-on .cc-arrows { display: flex; }
+  @media (max-width: 700px) { .cc-on .htrack-wrap { height: 470px; perspective: 800px; } .cc-cta > span { display: none; } }
+
+  /* Reviews */
+  .rev-head { display: grid; grid-template-columns: 1fr auto; gap: clamp(28px, 5vw, 72px); align-items: end; }
+  .scores { display: flex; gap: 14px; flex-wrap: wrap; }
+  .score { display: grid; gap: 8px; padding: 22px 26px; border-radius: var(--r); background: var(--panel); border: 1px solid var(--line); min-width: 190px; }
+  .score strong { font: 900 clamp(3.2rem, 2.6rem + 2vw, 4.2rem)/.85 var(--display); letter-spacing: -0.03em; }
+  .score strong small { font-size: .4em; color: var(--muted); letter-spacing: 0; }
+  .score .stars { display: inline-flex; gap: 2px; color: var(--rust); }
+  .score .stars .ic { width: 17px; height: 17px; }
+  .score span { color: var(--muted); font-size: .9rem; }
+  .score .src { font-weight: 700; color: var(--fg); font-size: .95rem; }
+  .marquee { margin-top: 52px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .marquee::-webkit-scrollbar { display: none; }
+  .track { display: flex; gap: 18px; width: max-content; padding: 6px max(var(--gut), calc((100vw - var(--wrap)) / 2 + var(--gut))) 24px; }
+  .rcard { scroll-snap-align: start; width: 370px; flex: none; display: flex; flex-direction: column; gap: 16px; padding: 28px; border-radius: var(--r); background: var(--panel); border: 1px solid var(--line); }
+  .rcard .top-r { display: flex; justify-content: space-between; align-items: center; }
+  .rcard .stars { display: inline-flex; gap: 2px; color: var(--rust); }
+  .rcard .stars .ic { width: 15px; height: 15px; }
+  .rcard .note { font: 800 1rem/1 var(--display); color: var(--rust); }
+  .rcard blockquote { margin: 0; font-size: 1.04rem; line-height: 1.55; }
+  .rcard figcaption { margin-top: auto; display: flex; align-items: center; gap: 12px; }
+  .rcard .av { width: 40px; height: 40px; border-radius: 999px; display: grid; place-items: center; background: rgba(88,117,96,.16); color: var(--sage-c); font-weight: 700; }
+  .rcard b { display: block; font-weight: 600; font-size: .95rem; }
+  .rcard small { color: var(--muted); font-size: .84rem; }
+  html.motion #opiniones .marquee { overflow: hidden; scroll-snap-type: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  html.motion #opiniones .track { animation: revslide var(--dur, 120s) linear infinite; }
+  html.motion #opiniones .marquee:hover .track, html.motion #opiniones .marquee:focus-within .track, html.motion #opiniones .marquee.hold .track { animation-play-state: paused; }
+  @keyframes revslide { to { transform: translateX(var(--shift, -50%)); } }
+  .rev-more { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+  @media (max-width: 860px) { .rev-head { grid-template-columns: 1fr; } .rcard { width: 290px; } .score { min-width: 0; flex: 1; } }
+
+  /* Extras */
+  .extras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 56px; }
+  .card { position: relative; display: flex; flex-direction: column; padding: clamp(26px, 3.4vw, 40px); border-radius: var(--r); background: var(--panel); border: 1px solid var(--line); overflow: hidden; }
+  .card h3 { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.02em; }
+  .card p { color: var(--muted); margin-top: 12px; }
+  .card .ic-lg { width: 54px; height: 54px; border-radius: 999px; display: grid; place-items: center; background: rgba(161,86,42,.12); color: var(--rust); margin-bottom: 22px; }
+  .card .ic-lg .ic { width: 26px; height: 26px; }
+  .card .btn { margin-top: auto; align-self: flex-start; }
+  .card .sp { flex: 1; min-height: 24px; }
+  .card.feat { background: radial-gradient(120% 100% at 100% 0%, rgba(232,137,76,.3), transparent 55%), var(--char); color: #f6ede3; border-color: transparent; }
+  .card.feat p { color: #cbbfb2; }
+  .card.feat .ic-lg { background: rgba(232,137,76,.16); color: var(--ember); }
+  .card .big { font: 900 3.6rem/.9 var(--display); letter-spacing: -0.03em; color: var(--ember); margin-top: 18px; }
+  .card .big small { font-size: .38em; letter-spacing: 0; color: #cbbfb2; margin-left: 6px; }
+  @media (max-width: 960px) { .extras { grid-template-columns: 1fr; } }
+
+  /* Steps */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 56px; counter-reset: s; }
+  .step { padding: 30px; border-radius: var(--r); background: var(--panel); border: 1px solid var(--line); }
+  .step::before { counter-increment: s; content: "0" counter(s); display: block; font: 900 3.4rem/1 var(--display); color: transparent; -webkit-text-stroke: 1.2px var(--accent); margin-bottom: 18px; }
+  .step h3 { font-size: 1.5rem; font-weight: 800; }
+  .step p { color: var(--muted); margin-top: 8px; }
+  @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
+
+  /* FAQ */
+  .faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
+  .faq-grid > div:first-child { position: sticky; top: 110px; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 24px 0; cursor: pointer; font: 700 1.25rem/1.25 var(--display); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary .ic { color: var(--accent); transition: transform .4s var(--ease); width: 22px; height: 22px; }
+  .faq details[open] summary .ic { transform: rotate(45deg); }
+  .faq details p { padding: 0 0 24px; color: var(--muted); max-width: 62ch; }
+  @media (max-width: 860px) { .faq-grid { grid-template-columns: 1fr; } .faq-grid > div:first-child { position: static; } }
+
+  /* Location */
+  .map-wrap { position: relative; margin-top: 52px; border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-lg); min-height: 600px; background: var(--panel); border: 1px solid var(--line); }
+  .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: sepia(.25) saturate(.8) contrast(.95); }
+  .map-shield { position: absolute; inset: 0; z-index: 1; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 24px; background: transparent; border: 0; cursor: pointer; }
+  .map-shield span { padding: .7em 1.2em; border-radius: 999px; background: rgba(20,19,18,.85); color: #f6ede3; font-weight: 500; font-size: .9rem; opacity: 0; transition: opacity .3s; }
+  .map-shield:hover span, .map-shield:focus-visible span { opacity: 1; }
+  .map-wrap.live .map-shield { display: none; }
+  .map-card { position: absolute; z-index: 2; top: 24px; left: 24px; width: min(390px, calc(100% - 48px)); padding: 28px; border-radius: var(--r-sm); background: rgba(20,19,18,.93); color: #f6ede3; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: var(--shadow-lg); --muted: #b5a99b; --line: rgba(246,237,227,.12); }
+  .map-card .logo-s { height: 72px; width: 72px; margin-bottom: 16px; }
+  .map-card .addr { font-weight: 600; font-size: 1.08rem; line-height: 1.35; }
+  .map-card .sub { color: var(--muted); margin-top: 4px; font-size: .94rem; }
+  .hours { width: 100%; margin-top: 18px; border-collapse: collapse; font-size: .9rem; }
+  .hours td { padding: 7px 0; border-top: 1px solid var(--line); vertical-align: top; }
+  .hours td + td { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+  .hours tr.today td { color: var(--ember); font-weight: 600; }
+  .open-now { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: .9rem; font-weight: 600; }
+  .open-now i { width: 8px; height: 8px; border-radius: 999px; background: #3bbf7a; box-shadow: 0 0 0 4px rgba(59,191,122,.18); flex: none; }
+  .open-now.closed i { background: #d9563f; box-shadow: 0 0 0 4px rgba(217,86,63,.2); }
+  .map-card .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .map-card .btn { padding: .78em 1.15em; font-size: .92rem; }
+  .map-card .btn-ghost { color: #f6ede3; box-shadow: inset 0 0 0 1.5px rgba(246,237,227,.3); }
+  .getting { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+  .getting div { display: flex; gap: 14px; align-items: flex-start; padding: 20px 22px; border-radius: var(--r-sm); background: var(--panel); border: 1px solid var(--line); }
+  .getting .ic { width: 24px; height: 24px; color: var(--accent); margin-top: 2px; }
+  .getting b { display: block; font-weight: 600; }
+  .getting span { color: var(--muted); font-size: .92rem; }
+  @media (max-width: 860px) { .getting { grid-template-columns: 1fr; } }
+  @media (max-width: 760px) {
+    .map-wrap { min-height: 0; display: flex; flex-direction: column; }
+    .map-wrap iframe { position: relative; height: 340px; order: 2; }
+    .map-shield { display: none; }
+    .map-card { position: relative; top: auto; left: auto; width: 100%; border-radius: 0; box-shadow: none; order: 1; }
+  }
+
+  /* Booking builder */
+  .book { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; margin-top: 56px; align-items: start; }
+  .builder { padding: clamp(24px, 4vw, 44px); border-radius: var(--r); background: var(--panel); border: 1px solid var(--line); }
+  .builder h3 { font: 700 .8rem/1 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .builder .sep { height: 1px; background: var(--line); margin: 26px 0; }
+  .fld { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .date { width: 100%; font: 600 1.05rem/1 var(--body); color: var(--fg); background: var(--bg); border: 1.5px solid var(--line); border-radius: var(--r-sm); padding: 0 16px; height: 56px; color-scheme: dark; }
+  .date:focus { outline: none; border-color: var(--tan); }
+  .seg { display: flex; gap: 6px; padding: 5px; border-radius: var(--r-sm); background: var(--bg); border: 1.5px solid var(--line); height: 56px; }
+  .seg input, .chipset input, .opt-f input { position: absolute; opacity: 0; pointer-events: none; }
+  .seg label { flex: 1; display: grid; place-items: center; border-radius: 11px; cursor: pointer; font-weight: 600; font-size: .95rem; color: var(--muted); transition: background-color .25s, color .25s; }
+  .seg input:checked + label { background: var(--tan); color: #1d1e20; }
+  .seg input:focus-visible + label, .chipset input:focus-visible + label { outline: 2px solid var(--ember); outline-offset: 2px; }
+  .chipset { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .chipset label { display: inline-flex; align-items: center; gap: 8px; padding: .7em 1.05em; border-radius: 999px; background: var(--bg); border: 1.5px solid var(--line); cursor: pointer; font-weight: 600; font-size: .92rem; font-variant-numeric: tabular-nums; transition: border-color .25s, background-color .25s; }
+  .chipset label .ic { width: 17px; height: 17px; color: var(--accent); }
+  .chipset input:checked + label { border-color: var(--tan); background: rgba(203,187,159,.18); }
+  .closed-msg { margin-top: 12px; color: #f0a48a; font-size: .92rem; min-height: 1.4em; }
+  .pax { display: flex; align-items: center; gap: 14px; margin-top: 14px; }
+  .pax button { width: 52px; height: 52px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--bg); color: var(--fg); font: 600 1.4rem/1 var(--body); cursor: pointer; transition: border-color .2s, transform .2s; }
+  .pax button:hover { border-color: var(--tan); }
+  .pax button:active { transform: scale(.94); }
+  .pax output { font: 900 2.6rem/1 var(--display); min-width: 2ch; text-align: center; font-variant-numeric: tabular-nums; }
+  .pax small { color: var(--muted); font-size: .9rem; }
+  .opt-f { display: flex; align-items: center; gap: 14px; margin-top: 22px; padding: 16px 18px; border-radius: var(--r-sm); background: var(--bg); border: 1.5px dashed rgba(232,137,76,.55); cursor: pointer; }
+  .opt-f input { position: static; opacity: 1; pointer-events: auto; width: 22px; height: 22px; accent-color: var(--ember); flex: none; }
+  .opt-f span { font-size: .95rem; }
+  .opt-f b { color: var(--ember); }
+  .piece { display: none; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; padding: 14px 18px; border-radius: var(--r-sm); background: rgba(232,137,76,.1); border: 1px solid rgba(232,137,76,.35); font-size: .95rem; }
+  .piece.on { display: flex; }
+  .piece button { border: 0; background: transparent; color: var(--muted); cursor: pointer; width: 34px; height: 34px; border-radius: 999px; display: grid; place-items: center; }
+  .piece button:hover { color: var(--fg); background: rgba(246,237,227,.08); }
+  .ticket { position: sticky; top: 100px; padding: clamp(24px, 4vw, 40px); border-radius: var(--r); background: var(--peach); color: #1d1e20; }
+  .ticket::before, .ticket::after { content: ""; position: absolute; left: 0; right: 0; height: 12px; background: radial-gradient(circle at 8px -2px, var(--char) 8px, transparent 8.5px) 0 0 / 16px 12px repeat-x; }
+  .ticket::before { top: -1px; }
+  .ticket::after { bottom: -1px; transform: scaleY(-1); }
+  .ticket .lbl { font: 700 .74rem/1 var(--body); letter-spacing: .16em; text-transform: uppercase; opacity: .6; }
+  .ticket .when { font: 800 1.9rem/1.05 var(--display); letter-spacing: -0.02em; margin-top: 10px; min-height: 2.1em; }
+  .ticket .row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px dashed rgba(29,30,32,.22); font-size: .95rem; }
+  .ticket .row span:last-child { text-align: right; font-weight: 600; }
+  .ticket .row:first-of-type { margin-top: 18px; }
+  .ticket .row[hidden] { display: none; }
+  .ticket .btn { width: 100%; margin-top: 18px; }
+  .ticket .btn-line { background: transparent; color: #1d1e20; box-shadow: inset 0 0 0 1.5px rgba(29,30,32,.35); margin-top: 10px; }
+  .ticket .btn-line:hover { background: rgba(29,30,32,.05); }
+  .ticket .note { display: flex; align-items: center; gap: 8px; justify-content: center; margin-top: 14px; font-size: .84rem; opacity: .72; text-align: center; }
+  .ticket .note .ic { width: 16px; height: 16px; }
+  .ticket .warn { margin-top: 12px; font-size: .88rem; color: #8a3a16; font-weight: 600; min-height: 1.3em; }
+  @media (max-width: 900px) { .book { grid-template-columns: 1fr; } .ticket { position: relative; top: auto; } }
+  @media (max-width: 480px) { .fld { grid-template-columns: 1fr; } }
+
+  /* Final call */
+  .final { position: relative; text-align: center; padding-block: clamp(110px, 15vw, 210px); overflow: hidden; isolation: isolate; color: #f6ede3; }
+  .final > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .final::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(70% 70% at 50% 50%, rgba(14,12,10,.55), rgba(14,12,10,.92) 85%); }
+  .final h2 { font-size: clamp(2.8rem, 1.2rem + 6.4vw, 7.4rem); max-width: 12ch; margin-inline: auto; }
+  .final h2 .hl { color: var(--ember); }
+  .final .lead { color: #ddd1c4; }
+  .final .ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 36px; }
+  .final .btn-ghost { color: #f6ede3; box-shadow: inset 0 0 0 1.5px rgba(246,237,227,.35); }
+
+  /* Footer: the sage green of their current site */
+  footer { padding-block: 64px 120px; font-size: .92rem; }
+  footer .wrap { display: grid; grid-template-columns: auto 1fr auto; gap: 40px; align-items: center; }
+  footer .logo img { height: 96px; width: 96px; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+  footer a { text-decoration: none; }
+  footer a:hover { color: var(--tan); }
+  footer .soc { display: flex; gap: 10px; }
+  footer .soc a { width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; background: rgba(251,244,236,.1); border: 1px solid var(--line); }
+  footer .copy { grid-column: 1 / -1; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 28px; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+  @media (max-width: 760px) { footer .wrap { grid-template-columns: 1fr; } }
+  @media (min-width: 761px) { footer { padding-bottom: 64px; } }
+
+  /* Mobile action bar */
+  .bar { position: fixed; z-index: 40; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); display: none; gap: 8px; padding: 8px; border-radius: 999px; background: rgba(28,26,24,.84); backdrop-filter: saturate(160%) blur(18px); -webkit-backdrop-filter: saturate(160%) blur(18px); border: 1px solid rgba(246,237,227,.12); box-shadow: 0 20px 40px -12px rgba(0,0,0,.8); transform: translateY(140%); transition: transform .6s var(--ease); }
+  .bar.show { transform: none; }
+  .bar .btn { flex: 1; padding: .95em 1em; font-size: .95rem; }
+  .bar .btn-ghost { flex: 0 0 auto; width: 52px; padding: 0; color: #f6ede3; box-shadow: inset 0 0 0 1.5px rgba(246,237,227,.25); }
+  @media (max-width: 760px) { .bar { display: flex; } }
+
+  /* Motion: transform + opacity only */
+  @media (prefers-reduced-motion: no-preference) {
+    html.motion .rv { opacity: 0; transform: translateY(32px); transition: opacity 1s var(--ease), transform 1s var(--ease); transition-delay: calc(var(--d, 0) * 80ms); }
+    html.motion .rv.in { opacity: 1; transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  html.motion, html.lenis, html.lenis body { scroll-behavior: auto !important; }
+  html.lenis, html.lenis body { height: auto; }
+  .lenis.lenis-stopped { overflow: hidden; }
+
+  /* Intro curtain: the round logo, then an ember bar */
+  .intro { display: none; }
+  html.motion .intro { display: grid; place-items: center; position: fixed; inset: 0; z-index: 100; background: var(--char); }
+  .intro img { width: min(200px, 46vw); height: auto; opacity: 0; transform: scale(.92); }
+  .intro .bar-load { position: absolute; left: 50%; bottom: 16%; width: 160px; height: 4px; margin-left: -80px; background: rgba(246,237,227,.08); overflow: hidden; border-radius: 4px; }
+  .intro .bar-load i { position: absolute; inset: 0; background: linear-gradient(90deg, var(--rust), var(--ember), #ffd08a); transform: scaleX(0); transform-origin: left; }
+
+  /* Chapter rail */
+  .rail { display: none; }
+  @media (min-width: 1360px) {
+    .rail { display: flex; flex-direction: column; gap: 14px; position: fixed; left: 20px; top: 50%; padding: 16px 16px 14px 12px; border-radius: 18px; background: rgba(28,26,24,.84); color: #b5a99b; backdrop-filter: saturate(160%) blur(18px); -webkit-backdrop-filter: saturate(160%) blur(18px); border: 1px solid rgba(246,237,227,.12); transform: translateY(-50%); z-index: 20; font: 600 .7rem/1 var(--body); letter-spacing: .1em; text-transform: uppercase; opacity: 0; pointer-events: none; transition: opacity .5s var(--ease); }
+    .rail.show { opacity: 1; pointer-events: auto; }
+    .rail a { position: relative; display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; transition: color .3s; }
+    .rail a::before { content: ""; width: 14px; height: 1.5px; background: currentColor; opacity: .5; transition: width .5s var(--ease), opacity .3s; }
+    .rail a span { position: absolute; left: 40px; white-space: nowrap; padding: 7px 11px; border-radius: 999px; background: var(--char-2); border: 1px solid rgba(246,237,227,.12); pointer-events: none; opacity: 0; transform: translateX(-6px); transition: opacity .35s, transform .5s var(--ease); }
+    .rail a.on { color: var(--ember); }
+    .rail a.on::before { width: 28px; opacity: 1; }
+    .rail:hover a span { opacity: 1; transform: none; }
+    .rail .pct { margin-top: 10px; font-variant-numeric: tabular-nums; color: var(--ember); }
+  }
+
+  /* Word-by-word heading reveal */
+  .w { display: inline-block; overflow: hidden; vertical-align: top; padding: .12em 0 .08em; margin: -.12em 0 -.08em; }
+  .w > span { display: inline-block; will-change: transform; }
+</style>
+</head>
+<body>
+
+<script>if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("motion");</script>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none"><symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol><symbol id="i-briefcase" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><rect x="32" y="72" width="192" height="136" rx="12"/><path d="M88 72V56a16 16 0 0 1 16-16h48a16 16 0 0 1 16 16v16M32 128h192"/></g></symbol><symbol id="i-cake" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M40 216h176M48 216v-80a16 16 0 0 1 16-16h128a16 16 0 0 1 16 16v80M48 168c16 16 32 16 48 0s32-16 48 0 32 16 48 0 16-8 16-8M128 120V88M128 64c-8-8-8-20 0-32 8 12 8 24 0 32Z"/></g></symbol><symbol id="i-calendar-check" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"/></symbol><symbol id="i-car" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M24 120h208M40 120l24-56h128l24 56v72a8 8 0 0 1-8 8h-24a8 8 0 0 1-8-8v-16H80v16a8 8 0 0 1-8 8H48a8 8 0 0 1-8-8Z"/><path d="M72 152h16M168 152h16"/></g></symbol><symbol id="i-chat-circle-text" viewBox="0 0 256 256"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></symbol><symbol id="i-check" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol><symbol id="i-clock" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol><symbol id="i-coins" viewBox="0 0 256 256"><path d="M184,89.57V84c0-25.08-37.83-44-88-44S8,58.92,8,84v40c0,20.89,26.25,37.49,64,42.46V172c0,25.08,37.83,44,88,44s88-18.92,88-44V132C248,111.3,222.58,94.68,184,89.57ZM232,132c0,13.22-30.79,28-72,28-3.73,0-7.43-.13-11.08-.37C170.49,151.77,184,139,184,124V105.74C213.87,110.19,232,122.27,232,132ZM72,150.25V126.46A183.74,183.74,0,0,0,96,128a183.74,183.74,0,0,0,24-1.54v23.79A163,163,0,0,1,96,152,163,163,0,0,1,72,150.25Zm96-40.32V124c0,8.39-12.41,17.4-32,22.87V123.5C148.91,120.37,159.84,115.71,168,109.93ZM96,56c41.21,0,72,14.78,72,28s-30.79,28-72,28S24,97.22,24,84,54.79,56,96,56ZM24,124V109.93c8.16,5.78,19.09,10.44,32,13.57v23.37C36.41,141.4,24,132.39,24,124Zm64,48v-4.17c2.63.1,5.29.17,8,.17,3.88,0,7.67-.13,11.39-.35A121.92,121.92,0,0,0,120,171.41v23.46C100.41,189.4,88,180.39,88,172Zm48,26.25V174.4a179.48,179.48,0,0,0,24,1.6,183.74,183.74,0,0,0,24-1.54v23.79a165.45,165.45,0,0,1-48,0Zm64-3.38V171.5c12.91-3.13,23.84-7.79,32-13.57V172C232,180.39,219.59,189.4,200,194.87Z"/></symbol><symbol id="i-flame" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M128 232c-40 0-72-28-72-68 0-56 56-80 56-136 32 16 56 48 56 80 8-8 16-24 16-40 16 16 16 48 16 64 0 56-32 100-72 100Z"/><path d="M128 232c-18 0-32-14-32-32 0-28 32-44 32-72 16 16 32 36 32 72 0 18-14 32-32 32Z"/></g></symbol><symbol id="i-fork-knife" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M72 32v192M48 32v48a24 24 0 0 0 48 0V32M184 224V32c-24 16-36 56-36 104h36"/></g></symbol><symbol id="i-gift" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><rect x="32" y="80" width="192" height="48" rx="8"/><path d="M208 128v72a8 8 0 0 1-8 8H56a8 8 0 0 1-8-8v-72M128 80v128M128 80c-20-32-72-40-72-12 0 12 16 12 72 12ZM128 80c20-32 72-40 72-12 0 12-16 12-72 12Z"/></g></symbol><symbol id="i-hand-heart" viewBox="0 0 256 256"><path d="M230.33,141.06a24.34,24.34,0,0,0-18.61-4.77C230.5,117.33,240,98.48,240,80c0-26.47-21.29-48-47.46-48A47.58,47.58,0,0,0,156,48.75,47.58,47.58,0,0,0,119.46,32C93.29,32,72,53.53,72,80c0,11,3.24,21.69,10.06,33a31.87,31.87,0,0,0-14.75,8.4L44.69,144H16A16,16,0,0,0,0,160v40a16,16,0,0,0,16,16H120a7.93,7.93,0,0,0,1.94-.24l64-16a6.94,6.94,0,0,0,1.19-.4L226,182.82l.44-.2a24.6,24.6,0,0,0,3.93-41.56ZM119.46,48A31.15,31.15,0,0,1,148.6,67a8,8,0,0,0,14.8,0,31.15,31.15,0,0,1,29.14-19C209.59,48,224,62.65,224,80c0,19.51-15.79,41.58-45.66,63.9l-11.09,2.55A28,28,0,0,0,140,112H100.68C92.05,100.36,88,90.12,88,80,88,62.65,102.41,48,119.46,48ZM16,160H40v40H16Zm203.43,8.21-38,16.18L119,200H56V155.31l22.63-22.62A15.86,15.86,0,0,1,89.94,128H140a12,12,0,0,1,0,24H112a8,8,0,0,0,0,16h32a8.32,8.32,0,0,0,1.79-.2l67-15.41.31-.08a8.6,8.6,0,0,1,6.3,15.9Z"/></symbol><symbol id="i-heart" viewBox="0 0 256 256"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z"/></symbol><symbol id="i-hourglass" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M64 32h128M64 224h128M72 32c0 56 56 64 56 96s-56 40-56 96M184 32c0 56-56 64-56 96s56 40 56 96"/></g></symbol><symbol id="i-instagram-logo" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></symbol><symbol id="i-leaf" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M48 208c0-104 48-160 160-168-8 112-64 160-168 168"/><path d="M48 208l88-88"/></g></symbol><symbol id="i-list" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol><symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol><symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol><symbol id="i-plus" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol><symbol id="i-quotes" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M108 72H60a12 12 0 0 0-12 12v48a12 12 0 0 0 12 12h48v8c0 24-16 40-40 40M208 72h-48a12 12 0 0 0-12 12v48a12 12 0 0 0 12 12h48v8c0 24-16 40-40 40"/></g></symbol><symbol id="i-repeat" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M24 128a72 72 0 0 1 72-72h136M200 24l32 32-32 32M232 128a72 72 0 0 1-72 72H24M56 232l-32-32 32-32"/></g></symbol><symbol id="i-scales" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M128 40v176M88 216h80M56 72h144M56 72l-32 72a32 32 0 0 0 64 0ZM200 72l-32 72a32 32 0 0 0 64 0Z"/></g></symbol><symbol id="i-shield-check" viewBox="0 0 256 256"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></symbol><symbol id="i-smiley" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM80,108a12,12,0,1,1,12,12A12,12,0,0,1,80,108Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,176,108Zm-1.07,48c-10.29,17.79-27.4,28-46.93,28s-36.63-10.2-46.92-28a8,8,0,1,1,13.84-8c7.47,12.91,19.21,20,33.08,20s25.61-7.1,33.07-20a8,8,0,0,1,13.86,8Z"/></symbol><symbol id="i-sparkle" viewBox="0 0 256 256"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></symbol><symbol id="i-star-fill" viewBox="0 0 256 256"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol><symbol id="i-thermometer" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M112 152V48a24 24 0 0 1 48 0v104a44 44 0 1 1-48 0Z"/><circle cx="136" cy="188" r="16"/><path d="M136 172V96M192 64h24M192 104h24"/></g></symbol><symbol id="i-train" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><rect x="56" y="32" width="144" height="160" rx="24"/><path d="M56 112h144M96 152h.01M160 152h.01M88 192l-24 40M168 192l24 40"/></g></symbol><symbol id="i-users" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><circle cx="88" cy="108" r="52"/><path d="M155 57a52 52 0 1 1 14 102M16 197a88 88 0 0 1 144 0M184 160a88 88 0 0 1 72 37"/></g></symbol><symbol id="i-whatsapp-logo" viewBox="0 0 256 256"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></symbol><symbol id="i-wine" viewBox="0 0 256 256"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M80 24h96l8 64a56 56 0 0 1-112 0Z"/><path d="M128 144v80M88 224h80M76 72h104"/></g></symbol><symbol id="i-x" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol></svg>
+
+<div class="intro" aria-hidden="true"><img src="img/logo.png" alt=""><span class="bar-load"><i></i></span></div>
+
+<nav class="rail" aria-label="Capítulos">
+  <a href="#menu-fuego"><span>Menú Fuego</span></a>
+  <a href="#camara"><span>La Cámara</span></a>
+  <a href="#cachopo"><span>Cachopo</span></a>
+  <a href="#carta"><span>Carta</span></a>
+  <a href="#local"><span>El local</span></a>
+  <a href="#opiniones"><span>Opiniones</span></a>
+  <a href="#ubicacion"><span>Dónde estamos</span></a>
+  <a href="#reserva"><span>Reserva</span></a>
+  <b class="pct">0%</b>
+</nav>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Petit Muu Braseria, inicio"><img src="img/logo.png" alt="Petit Muu Braseria" width="50" height="50"><span>Petit Muu<small>BRASERIA</small></span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#menu-fuego">Menú Fuego</a>
+      <a href="#camara">La Cámara</a>
+      <a href="#carta">Carta</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#ubicacion">Dónde estamos</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="ca" aria-pressed="false">CA</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-fire" href="#reserva"><svg class="ic"><use href="#i-calendar-check"/></svg><span>Reservar mesa</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir el menú"><svg class="ic"><use href="#i-list"/></svg></button>
+  </div>
+  <nav class="mobile-nav" id="mnav" aria-label="Menú móvil">
+    <a href="#menu-fuego">Menú Fuego</a>
+    <a href="#camara">La Cámara</a>
+    <a href="#carta">Carta</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#ubicacion">Dónde estamos</a>
+    <a href="#reserva">Reservar mesa</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero dark" id="inicio">
+    <canvas class="sparks" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow rv">Brasería en l'Eixample · Plaça Letamendi</p>
+        <h1 class="rv">Aquí la carne <span class="hl">se respeta.</span></h1>
+        <p class="lead rv">Chuletón madurado hasta 60 días, Wagyu A5 japonés y el cachopo del que habla medio Barcelona. Todo sobre brasa de carbón natural, al punto que tú pidas.</p>
+        <div class="ctas rv">
+          <a class="btn btn-fire" href="#menu-fuego" data-fuego><svg class="ic"><use href="#i-flame"/></svg><span>Quiero el Menú Fuego</span><span class="price">69 €</span></a>
+          <a class="btn btn-ghost" href="#carta"><span>Ver la carta</span></a>
+        </div>
+        <div class="rating rv">
+          <span class="stars"><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg></span>
+          <span><b>9,3</b> TheFork</span><i class="dot"></i><span><b>4,7</b> Google</span><i class="dot"></i><span><b>1.704</b> opiniones</span>
+        </div>
+      </div>
+      <div class="trio">
+        <img class="t1" src="img/hero-maduracion.jpg" alt="Pieza de vaca madurada sostenida con guante negro, con la grasa infiltrada a la vista" width="880" height="1100">
+        <div class="t2"><img src="img/chuleton-corte.jpg" alt="Chuletón madurado a la brasa, cortado sobre pizarra con sal en escamas" width="1051" height="1400"><span class="veil"></span></div>
+        <img class="t3" src="img/hero-cachopo.jpg" alt="Cachopo cortado con el queso fundido estirándose" width="825" height="1100">
+      </div>
+    </div>
+    <div class="stage-cap" aria-hidden="true"><p>Carbón natural. <span class="em">Carne con alma.</span><small>1.704 opiniones entre TheFork y Google lo han dejado por escrito.</small></p></div>
+  </section>
+
+  <div class="ticker dark" aria-hidden="true">
+    <div class="row">
+      <span><b>Brasa de carbón</b><svg class="ic"><use href="#i-flame"/></svg>Maduración 60 días<svg class="ic"><use href="#i-flame"/></svg><b>Wagyu A5</b><svg class="ic"><use href="#i-flame"/></svg>Cachopo<svg class="ic"><use href="#i-flame"/></svg><b>Plaça Letamendi</b><svg class="ic"><use href="#i-flame"/></svg></span>
+      <span><b>Brasa de carbón</b><svg class="ic"><use href="#i-flame"/></svg>Maduración 60 días<svg class="ic"><use href="#i-flame"/></svg><b>Wagyu A5</b><svg class="ic"><use href="#i-flame"/></svg>Cachopo<svg class="ic"><use href="#i-flame"/></svg><b>Plaça Letamendi</b><svg class="ic"><use href="#i-flame"/></svg></span>
+    </div>
+  </div>
+
+  <section class="proof" aria-label="Petit Muu en cifras" style="padding-block:clamp(80px,10vw,130px)">
+    <div class="wrap">
+      <div class="rv"><strong data-count="9.3" data-dec="1">9,3</strong><span>de nota media con 1.227 opiniones verificadas</span><b class="src">TheFork</b></div>
+      <div class="rv" style="--d:1"><strong data-count="4.7" data-dec="1">4,7</strong><span>estrellas de media con 477 reseñas</span><b class="src">Google</b></div>
+      <div class="rv" style="--d:2"><strong data-count="42">42</strong><span>opiniones nuevas en los últimos 30 días</span><b class="src">TheFork</b></div>
+      <div class="rv" style="--d:3"><strong data-count="60">60</strong><span>días de maduración en nuestros mejores chuletones</span><b class="src">La Cámara</b></div>
+    </div>
+  </section>
+
+  <section class="section peach" id="menu-fuego">
+    <div class="wrap">
+      <div class="offer-head">
+        <div>
+          <p class="eyebrow rv">La oferta de la casa · para dos</p>
+          <h2 class="rv">El Menú <span class="hl">Fuego.</span> Una cena entera alrededor de un chuletón.</h2>
+        </div>
+        <p class="lead rv">Lo que más se pide en Petit Muu, en el orden en que hay que comerlo. Croquetas, chuletón madurado de kilo y pico, guarniciones, postre y nuestra garantía del punto. Para dos, por 69 €.</p>
+      </div>
+
+      <div class="story">
+        <div class="story-media" aria-hidden="true">
+          <div class="frame">
+            <img src="img/croquetas.jpg" alt="">
+            <img src="img/chuleton-tabla.jpg" alt="">
+            <img src="img/carne-tabla.jpg" alt="">
+            <img src="img/entrana.jpg" alt="">
+            <img src="img/local-3.jpg" alt="">
+            <span class="count"><b>01</b> / 05</span>
+          </div>
+        </div>
+        <ol class="story-steps">
+          <li data-img="0"><span class="n">1</span><div><h3>Croquetas de bienvenida</h3><p>Dos de jamón 5J y dos de cecina Black Angus: las que más se repiten en las reseñas. Llegan a la mesa mientras eliges el vino.</p><img class="m" src="img/croquetas.jpg" alt="Croquetas caseras de jamón y cecina junto a dos copas de vino" loading="lazy"></div></li>
+          <li data-img="1"><span class="n">2</span><div><h3>Chuletón de Girona, 1,1 kg</h3><p>Ternera de Girona madurada 30 días, sellada sobre carbón natural y servida en pizarra caliente con sal en escamas. Para compartir, sin quedarse corto.</p><span class="tag"><svg class="ic"><use href="#i-hourglass"/></svg>30 días de maduración</span><img class="m" src="img/chuleton-tabla.jpg" alt="Chuletón cortado sobre pizarra con sal en escamas" loading="lazy"></div></li>
+          <li data-img="2"><span class="n">3</span><div><h3>Al punto que pidas</h3><p>Te preguntamos cómo os gusta y el parrillero lo respeta. Si no llega a la mesa como lo pediste, lo hacemos otra vez.</p><span class="tag"><svg class="ic"><use href="#i-shield-check"/></svg>Garantía Punto Perfecto</span><img class="m" src="img/carne-tabla.jpg" alt="Chuletón al punto, rosado por dentro y tostado por fuera" loading="lazy"></div></li>
+          <li data-img="3"><span class="n">4</span><div><h3>Dos guarniciones y pimientos</h3><p>Patatas fritas caseras, parmentier de patata trufada y una ración de pimientos de Padrón para el centro de la mesa.</p><img class="m" src="img/entrana.jpg" alt="Carne a la brasa con parmentier trufada" loading="lazy"></div></li>
+          <li data-img="4"><span class="n">5</span><div><h3>Tarta de queso y sobremesa</h3><p>Nuestra tarta de queso para compartir. Y nadie os mete prisa: la mesa es vuestra hasta el café.</p><img class="m" src="img/local-3.jpg" alt="Comedor de Petit Muu con paredes de ladrillo y azulejo verde" loading="lazy"></div></li>
+        </ol>
+      </div>
+
+      <div class="deal rv">
+        <div class="deal-list">
+          <h3>Lo que llega a la mesa</h3>
+          <ul>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>4 croquetas caseras<small>Jamón 5J y cecina Black Angus</small></span><span>9,60 €</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Pimientos de Padrón</span><span>7,20 €</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Chuletón de ternera de Girona · 1,1 kg<small>Madurado 30 días, con guarnición</small></span><span>60,50 €</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Parmentier de patata trufada</span><span>4,50 €</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Tarta de queso para compartir</span><span>7,50 €</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Garantía Punto Perfecto</span><span><em>Incluida</em></span></li>
+          </ul>
+        </div>
+        <div class="deal-pay">
+          <span class="was">Precio en carta <s>89,30 €</s></span>
+          <span class="now">69<small>€</small></span>
+          <span class="per">para dos personas</span>
+          <p>Te ahorras 20,30 € y no tienes que pensar qué pedir.</p>
+          <a class="btn btn-fire" href="#reserva" data-fuego><svg class="ic"><use href="#i-calendar-check"/></svg><span>Reservar mi Menú Fuego</span></a>
+          <div class="ups">
+            <span>Sube a vaca rubia 60 días (900 g) <b>+30 €</b></span>
+            <span>Añade 100 g de Wagyu A5 <b>+30 €</b></span>
+          </div>
+          <span class="fine">Solo con reserva directa: web, WhatsApp o teléfono. Bebida aparte.</span>
+        </div>
+      </div>
+
+      <div class="guarantee rv">
+        <div class="seal" aria-hidden="true">
+          <svg class="ring" viewBox="0 0 100 100"><defs><path id="circ" d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs><text><textPath href="#circ">Punto perfecto · Punto perfecto · </textPath></text></svg>
+          <svg class="ic"><use href="#i-thermometer"/></svg>
+        </div>
+        <div>
+          <h3>Garantía Punto Perfecto</h3>
+          <p>Poco hecho, al punto o hecho: tú decides y lo apuntamos en la comanda. Si la carne no llega a la mesa como la pediste, te hacemos una pieza nueva. Sin discutir y sin cobrarla dos veces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark" id="camara">
+    <div class="wrap">
+      <div class="offer-head">
+        <div>
+          <p class="eyebrow rv">La Cámara</p>
+          <h2 class="rv">Elige tu pieza. <span class="hl">Te la guardamos.</span></h2>
+        </div>
+        <p class="lead rv">Cuatro carnes, de la ternera de Girona al Wagyu A5 japonés. Mira el precio exacto por peso y resérvala con tu mesa, para que nadie se la lleve antes.</p>
+      </div>
+      <div class="camara">
+        <div class="rv">
+          <div class="cut-photo">
+            <img class="on" src="img/chuleton-tabla.jpg" alt="Chuletón de ternera de Girona a la brasa" data-cut="0">
+            <img src="img/hero-mesa.jpg" alt="Chuletón de vaca frisona a la brasa con su grasa dorada, junto a una copa de vino" data-cut="1">
+            <img src="img/hero-maduracion.jpg" alt="Pieza de vaca rubia madurada con la grasa amarilla infiltrada" data-cut="2">
+            <img src="img/wagyu.jpg" alt="Bloque de Wagyu A5 con su veteado de grasa sobre la tabla de Petit Muu" data-cut="3">
+            <div class="days"><div><b id="c-days">30</b><span id="c-days-l">días de maduración</span></div></div>
+          </div>
+        </div>
+        <div class="rv" style="--d:1">
+          <div class="cuts" role="group" aria-label="Elige la carne">
+            <button type="button" aria-pressed="true" data-i="0"><b>Ternera de Girona</b><small>30 días · 55 €/kg</small></button>
+            <button type="button" aria-pressed="false" data-i="1"><b>Vaca frisona</b><small>60 días · 88 €/kg</small></button>
+            <button type="button" aria-pressed="false" data-i="2"><b>Vaca rubia</b><small>60 días · 108 €/kg</small></button>
+            <button type="button" aria-pressed="false" data-i="3"><b>Wagyu A5</b><small>Japón · 300 €/kg</small></button>
+          </div>
+          <div class="cut-info">
+            <h3 id="c-name">Chuletón de ternera de Girona</h3>
+            <p id="c-desc">Tierna y jugosa, de sabor limpio. La puerta de entrada al chuletón y la que va en el Menú Fuego.</p>
+            <div class="meters">
+              <div class="meter"><span>Ternura</span><i data-m="0"><span></span><span></span><span></span><span></span><span></span></i></div>
+              <div class="meter"><span>Grasa infiltrada</span><i data-m="1"><span></span><span></span><span></span><span></span><span></span></i></div>
+              <div class="meter"><span>Intensidad</span><i data-m="2"><span></span><span></span><span></span><span></span><span></span></i></div>
+            </div>
+            <div class="weights" role="group" aria-label="Elige el peso"></div>
+            <div class="cut-total">
+              <div><div class="p" id="c-price">60,50 €</div><div class="pp" id="c-pp">Para 2–3 personas · incluye guarnición</div></div>
+              <a class="btn btn-fire" href="#reserva" id="c-book"><svg class="ic"><use href="#i-calendar-check"/></svg><span>Reservar con esta pieza</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cachopo">
+    <div class="wrap star">
+      <div class="star-media rv">
+        <img class="big" src="img/cachopo-mesa.jpg" alt="Cachopo con patatas fritas caseras y pimientos de Padrón en fuente de acero" width="901" height="1200" loading="lazy">
+        <img class="small" src="img/cachopo-corte.jpg" alt="Corte del cachopo con el queso fundido y el jamón por dentro" loading="lazy">
+        <div class="stamp"><div><b>79</b><span>reseñas lo nombran</span></div></div>
+      </div>
+      <div>
+        <p class="eyebrow rv">El plato estrella</p>
+        <h2 class="rv">El cachopo que se <span class="hl">viene a probar.</span></h2>
+        <p class="lead rv">Filete de ternera relleno de queso Havarti y jamón ibérico, rebozado hasta que cruje. Es la palabra que más sale en nuestras reseñas de Google. Mucha gente cruza Barcelona solo por él.</p>
+        <ul class="tick rv">
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Con patatas fritas caseras y pimientos de Padrón</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Generoso: pensado para compartir entre dos</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Recién hecho, nunca precocinado</span></li>
+        </ul>
+        <blockquote class="rv" lang="es">«Vi este restaurante a través de las redes sociales y vine por probar el cachopo. Todo estaba muy bueno, el entrecot y sobre todo los entrantes. Lo recomiendo.»<cite>Maüra B. · Local Guide en Google</cite></blockquote>
+        <div class="row rv"><span class="pr">32,50 €</span><a class="btn btn-fire" href="#reserva" data-cachopo><svg class="ic"><use href="#i-calendar-check"/></svg><span>Reservar mesa para el cachopo</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section peach" id="carta">
+    <div class="wrap">
+      <div class="carta-head">
+        <div>
+          <p class="eyebrow rv">La carta</p>
+          <h2 class="rv">Del carbón a la mesa, <span class="hl">sin atajos.</span></h2>
+        </div>
+        <p class="lead rv">Precio medio por persona: unos 30 €. Todas las carnes a la brasa incluyen una guarnición a elegir.</p>
+      </div>
+      <div class="tabs rv" role="tablist" aria-label="Filtrar la carta">
+        <button type="button" role="tab" aria-selected="true" data-f="brasa">A la brasa</button>
+        <button type="button" role="tab" aria-selected="false" data-f="picar">Para picar</button>
+        <button type="button" role="tab" aria-selected="false" data-f="huevos">Huevos y tablas</button>
+        <button type="button" role="tab" aria-selected="false" data-f="esp">Especiales</button>
+        <button type="button" role="tab" aria-selected="false" data-f="burger">Hamburguesas</button>
+        <button type="button" role="tab" aria-selected="false" data-f="mar">Del mar</button>
+        <button type="button" role="tab" aria-selected="false" data-f="postre">Postres</button>
+      </div>
+      <div class="board rv">
+        <div class="board-grid">
+          <div class="item" data-k="brasa"><span class="name">Chuletón de ternera de Girona</span><span class="p">55 €/kg</span><span class="d">Madurado 30 días · 600 g 33 € · 700 g 38,50 € · 900 g 49,50 € · 1.100 g 60,50 €</span></div>
+          <div class="item" data-k="brasa"><span class="name">Chuletón de vaca frisona premium</span><span class="p">88 €/kg</span><span class="d">Madurado 60 días · 700 g 61,60 € · 900 g 79,20 € · 1.100 g 96,80 € · 1.300 g 114,40 €</span></div>
+          <div class="item" data-k="brasa"><span class="name">Chuletón de vaca rubia nacional</span><span class="p">108 €/kg</span><span class="d">Madurado 60 días · 700 g 75,60 € · 900 g 97,20 € · 1.100 g 118,80 € · 1.300 g 140,40 €</span></div>
+          <div class="item" data-k="brasa"><span class="name">Wagyu A5 japonés</span><span class="p">300 €/kg</span><span class="d">100 g 30 € · 300 g 90 € · 500 g 150 € · 700 g 210 €</span></div>
+          <div class="item" data-k="brasa"><span class="name">Entrecot de ternera</span><span class="p">24,00 €</span></div>
+          <div class="item" data-k="brasa"><span class="name">Entraña de ternera</span><span class="p">19,00 €</span></div>
+          <div class="item" data-k="brasa"><span class="name">Tira de costilla de ternera</span><span class="p">20,00 €</span></div>
+          <div class="item" data-k="brasa"><span class="name">Chuletas de cordero lechal</span><span class="p">23,00 €</span></div>
+          <div class="item" data-k="brasa"><span class="name">Solomillo de ternera con foie</span><span class="p">29,00 €</span><span class="d">Con parmentier trufada. No incluye guarnición.</span></div>
+          <div class="item" data-k="brasa"><span class="name">Guarniciones</span><span class="p">3,50–4,50 €</span><span class="d">Patatas fritas caseras · patatas de boniato · parmentier de patata trufada · arroz jazmín · ensalada verde · pimientos de Padrón</span></div>
+
+          <div class="item" data-k="picar" hidden><span class="name">Croquetas de jamón 5J</span><span class="p">2,40 €</span><span class="d">Caseras, por unidad</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Croquetas de cecina Black Angus</span><span class="p">2,40 €</span><span class="d">Caseras, por unidad</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Bravas con virutas de chorizo de Jabugo</span><span class="p">7,80 €</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Patatas de boniato</span><span class="p">7,20 €</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Ensaladilla rusa</span><span class="p">7,20 €</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Torrezno de Soria</span><span class="p">7,80 €</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Pimientos de Padrón</span><span class="p">7,20 €</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Butifarra de ternera a la brasa</span><span class="p">8,00 €</span><span class="d">Con chimichurri</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Chistorra de buey</span><span class="p">10,50 €</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Calamares a la andaluza</span><span class="p">9,50 €</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Calamarcitos con ajo y perejil</span><span class="p">10,50 €</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Boquerones en vinagre</span><span class="p">8,30 €</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Pescadito frito</span><span class="p">8,50 €</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Queso brie rebozado</span><span class="p">7,80 €</span><span class="d">5 unidades</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Champiñones rellenos</span><span class="p">9,30 €</span><span class="d">Con queso de cabra y jamón ibérico</span></div>
+          <div class="item" data-k="picar" hidden><span class="name">Fingers de pollo</span><span class="p">8,90 €</span><span class="d">Con mayonesa de bacon ahumado</span></div>
+
+          <div class="item" data-k="huevos" hidden><span class="name">Huevos estrellados con jamón 5J</span><span class="p">16,80 €</span></div>
+          <div class="item" data-k="huevos" hidden><span class="name">Huevos estrellados con cecina Black Angus</span><span class="p">14,50 €</span></div>
+          <div class="item" data-k="huevos" hidden><span class="name">Huevos estrellados con foie</span><span class="p">15,50 €</span></div>
+          <div class="item" data-k="huevos" hidden><span class="name">Huevos estrellados con gambas al ajillo</span><span class="p">17,80 €</span></div>
+          <div class="item" data-k="huevos" hidden><span class="name">Tabla de jamón 5J</span><span class="p">25,90 €</span></div>
+          <div class="item" data-k="huevos" hidden><span class="name">Tabla de cecina Black Angus</span><span class="p">21,50 €</span></div>
+          <div class="item" data-k="huevos" hidden><span class="name">Tabla de 4 quesos</span><span class="p">18,90 €</span><span class="d">Oveja, payoyo, brie y azul</span></div>
+          <div class="item" data-k="huevos" hidden><span class="name">Tabla de queso payoyo</span><span class="p">12,50 €</span></div>
+          <div class="item" data-k="huevos" hidden><span class="name">Tabla de queso de oveja</span><span class="p">9,90 €</span></div>
+
+          <div class="item" data-k="esp" hidden><span class="name">Cachopo supremo asturiano <span class="badge">El más pedido</span></span><span class="p">32,50 €</span><span class="d">Ternera rellena de queso Havarti y jamón ibérico, con patatas caseras y pimientos de Padrón</span></div>
+          <div class="item" data-k="esp" hidden><span class="name">Steak tartar de Petit Muu</span><span class="p">19,50 €</span></div>
+          <div class="item" data-k="esp" hidden><span class="name">Carpaccio de solomillo de Girona</span><span class="p">19,50 €</span></div>
+
+          <div class="item" data-k="burger" hidden><span class="name">Petit Muu</span><span class="p">16,50 €</span><span class="d">Ternera de Girona, cecina Black Angus, cheddar, huevo campero, cebolla crujiente y salsa burger</span></div>
+          <div class="item" data-k="burger" hidden><span class="name">Wagyu</span><span class="p">24,50 €</span><span class="d">Wagyu japonés de 180 g, provolone, salsa burger y cebolla caramelizada</span></div>
+          <div class="item" data-k="burger" hidden><span class="name">Foie de oca</span><span class="p">17,50 €</span><span class="d">Ternera, foie de oca, brie, cebolla caramelizada, mermelada de arándanos y rúcula</span></div>
+          <div class="item" data-k="burger" hidden><span class="name">Cheese Burger</span><span class="p">10,90 €</span><span class="d">Ternera de Girona, cheddar y salsa burger</span></div>
+
+          <div class="item" data-k="mar" hidden><span class="name">Pulpo a la brasa</span><span class="p">24,50 €</span><span class="d">Con parmentier</span></div>
+          <div class="item" data-k="mar" hidden><span class="name">Lubina braseada a la donostiarra</span><span class="p">19,50 €</span></div>
+          <div class="item" data-k="mar" hidden><span class="name">Corvina del Mediterráneo braseada</span><span class="p">19,90 €</span><span class="d">Con shiitakes salteados</span></div>
+
+          <div class="item" data-k="postre" hidden><span class="name">Tarta de queso</span><span class="p">7,50 €</span></div>
+          <div class="item" data-k="postre" hidden><span class="name">Brownie de chocolate</span><span class="p">8,20 €</span><span class="d">Con crema de pistacho y helado de vainilla</span></div>
+          <div class="item" data-k="postre" hidden><span class="name">Coulant de chocolate</span><span class="p">6,50 €</span><span class="d">Con bola de vainilla</span></div>
+          <div class="item" data-k="postre" hidden><span class="name">Tiramisú casero</span><span class="p">6,50 €</span></div>
+          <div class="item" data-k="postre" hidden><span class="name">Crema catalana</span><span class="p">5,50 €</span></div>
+          <div class="item" data-k="postre" hidden><span class="name">Flan con nata</span><span class="p">5,50 €</span></div>
+          <div class="item" data-k="postre" hidden><span class="name">Yogur griego con miel y crumble</span><span class="p">5,50 €</span></div>
+          <div class="item" data-k="postre" hidden><span class="name">Café irlandés</span><span class="p">7,00 €</span></div>
+          <div class="item" data-k="postre" hidden><span class="name">Bola de helado</span><span class="p">2,50 €</span><span class="d">Vainilla, chocolate, fresa, limón o mango</span></div>
+        </div>
+        <div class="board-foot">
+          <span>Tenemos platos vegetarianos y avisamos de alérgenos en sala.</span>
+          <a class="btn btn-fire" href="#reserva"><svg class="ic"><use href="#i-calendar-check"/></svg><span>Reservar mesa</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" id="local">
+    <img src="img/local-2.jpg" alt="Comedor alargado de Petit Muu con mesas de madera, azulejo verde y ladrillo visto" loading="lazy">
+    <div class="inner">
+      <p class="eyebrow rv">El local</p>
+      <h2 class="rv">Ladrillo, azulejo verde y <span class="hl" style="color:var(--ember)">brasa encendida.</span></h2>
+      <p class="lead rv">En la Plaça del Doctor Letamendi, a un paso de Rambla de Catalunya y Passeig de Gràcia. Un comedor cálido y amplio para cenar en pareja, con amigos o con toda la oficina.</p>
+      <ul class="chips rv">
+        <li><svg class="ic"><use href="#i-train"/></svg>Metro Urgell (L1) y Hospital Clínic (L5)</li>
+        <li><svg class="ic"><use href="#i-car"/></svg>Parkings a menos de 100 m</li>
+        <li><svg class="ic"><use href="#i-users"/></svg>Grupos grandes con reserva</li>
+        <li><svg class="ic"><use href="#i-leaf"/></svg>Opciones vegetarianas</li>
+        <li><svg class="ic"><use href="#i-heart"/></svg>LGBTQ+ friendly</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="works dark" id="galeria">
+    <div class="wrap works-head">
+      <div>
+        <p class="eyebrow rv">De la brasa a tu mesa</p>
+        <h2 class="rv">Fotos reales, <span class="hl">platos reales.</span></h2>
+      </div>
+      <a class="link rv" href="https://www.instagram.com/petit__muu/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-instagram-logo"/></svg>@petit__muu · 16,8 mil seguidores</a>
+    </div>
+    <div class="htrack-wrap" aria-label="Galería de platos">
+      <div class="htrack">
+        <figure><img src="img/huevos.jpg" alt="Huevos estrellados con jamón sobre patatas" loading="lazy"><figcaption>Huevos estrellados</figcaption></figure>
+        <figure><img src="img/tartar.jpg" alt="Steak tartar con huevo frito y cebollino" loading="lazy"><figcaption>Steak tartar</figcaption></figure>
+        <figure><img src="img/wagyu-tabla.jpg" alt="Wagyu A5 sobre la tabla de madera de Petit Muu" loading="lazy"><figcaption>Wagyu A5</figcaption></figure>
+        <figure><img src="img/hero-cachopo.jpg" alt="Cachopo con el queso fundido" loading="lazy"><figcaption>Cachopo supremo</figcaption></figure>
+        <figure><img src="img/jamon.jpg" alt="Lonchas de cecina Black Angus" loading="lazy"><figcaption>Cecina Black Angus</figcaption></figure>
+        <figure><img src="img/entrecot.jpg" alt="Entrecot a la brasa con patatas de boniato" loading="lazy"><figcaption>Entrecot y boniato</figcaption></figure>
+        <figure><img src="img/solomillo-foie.jpg" alt="Solomillo con foie sobre parmentier trufada" loading="lazy"><figcaption>Solomillo con foie</figcaption></figure>
+        <figure><img src="img/croquetas-2.jpg" alt="Croquetas caseras de jamón" loading="lazy"><figcaption>Croquetas caseras</figcaption></figure>
+        <figure><img src="img/carpaccio.jpg" alt="Carpaccio de solomillo con tostas" loading="lazy"><figcaption>Carpaccio de Girona</figcaption></figure>
+        <figure><img src="img/champinones.jpg" alt="Champiñones rellenos de queso de cabra" loading="lazy"><figcaption>Champiñones rellenos</figcaption></figure>
+        <figure><img src="img/gambas.jpg" alt="Gambas al ajillo y patatas" loading="lazy"><figcaption>Gambas al ajillo</figcaption></figure>
+        <figure><img src="img/queso-payoyo.jpg" alt="Tabla de queso payoyo con frutos secos" loading="lazy"><figcaption>Queso payoyo</figcaption></figure>
+      </div>
+    </div>
+    <div class="wrap cc-foot">
+      <span class="cc-n" aria-live="polite">01 / 12</span>
+      <div class="cc-cta">
+        <span>¿Con hambre ya?</span>
+        <div class="cc-arrows"><button class="cc-prev" type="button" aria-label="Anterior"><svg class="ic"><use href="#i-arrow-right"/></svg></button><button class="cc-next" type="button" aria-label="Siguiente"><svg class="ic"><use href="#i-arrow-right"/></svg></button></div>
+        <a class="btn btn-fire" href="#reserva"><span>Reservar mesa</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section peach" id="opiniones">
+    <div class="wrap rev-head">
+      <div>
+        <p class="eyebrow rv">Opiniones</p>
+        <h2 class="rv">1.704 opiniones. <span class="hl">Un mismo veredicto.</span></h2>
+        <p class="lead rv">Reseñas reales de TheFork y Google. Se repiten las mismas palabras: la calidad de la carne, el trato y que siempre vuelven.</p>
+      </div>
+      <div class="scores rv">
+        <div class="score"><span class="src">TheFork</span><strong>9,3<small> /10</small></strong><span>1.227 opiniones</span></div>
+        <div class="score"><span class="src">Google</span><strong>4,7</strong><span class="stars"><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg></span><span>477 reseñas</span></div>
+      </div>
+    </div>
+    <div class="marquee" id="revs" aria-label="Reseñas de clientes">
+      <div class="track">
+        <figure class="rcard"><div class="top-r"><span class="stars"><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg></span><span class="note">10/10</span></div><blockquote lang="es">«En mi opinión, de lo mejor en Barcelona, tanto por precio como por cocina y servicio. Si te gusta la carne, no lo dudes.»</blockquote><figcaption><span class="av">M</span><span><b>Manuel J.</b><small>TheFork</small></span></figcaption></figure>
+        <figure class="rcard"><div class="top-r"><span class="stars"><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg></span><span class="note">10/10</span></div><blockquote lang="es">«Una carta muy equilibrada, con materia prima excepcional. El servicio, muy profesional. Muy recomendable.»</blockquote><figcaption><span class="av">J</span><span><b>Jordi A.</b><small>TheFork</small></span></figcaption></figure>
+        <figure class="rcard"><div class="top-r"><span class="stars"><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg></span><span class="note">Google</span></div><blockquote lang="es">«Cena buenísima, nos ha gustado mucho todo. Las croquetas de jamón estaban buenísimas, incluso repetimos, y pedimos también la de cecina, que estaba increíble.»</blockquote><figcaption><span class="av">A</span><span><b>Alicia O.</b><small>Local Guide · Google</small></span></figcaption></figure>
+        <figure class="rcard"><div class="top-r"><span class="stars"><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg></span><span class="note">10/10</span></div><blockquote lang="es">«¡Nos encanta! No es la primera vez que vamos y siempre encontramos todo delicioso. Volveremos sin dudarlo.»</blockquote><figcaption><span class="av">E</span><span><b>Elisabet G.</b><small>TheFork</small></span></figcaption></figure>
+        <figure class="rcard"><div class="top-r"><span class="stars"><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg></span><span class="note">9,5/10</span></div><blockquote lang="es">«Las croquetas de cecina, los boquerones en vinagre… y luego un solomillo con foie muy gustoso y bien hecho.»</blockquote><figcaption><span class="av">C</span><span><b>Carlos G.</b><small>155 opiniones · TheFork</small></span></figcaption></figure>
+        <figure class="rcard"><div class="top-r"><span class="stars"><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg></span><span class="note">10/10</span></div><blockquote lang="es">«Como en todas las ocasiones anteriores, perfecto: buena comida y buen servicio a muy buen precio.»</blockquote><figcaption><span class="av">J</span><span><b>Jordi C.</b><small>52 opiniones · TheFork</small></span></figcaption></figure>
+        <figure class="rcard"><div class="top-r"><span class="stars"><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg></span><span class="note">Google</span></div><blockquote lang="es">«Los pimientos de Padrón muy buenos y la ensaladilla muy fresquita y muy buena.»</blockquote><figcaption><span class="av">G</span><span><b>Cliente de Google</b><small>Google</small></span></figcaption></figure>
+        <figure class="rcard"><div class="top-r"><span class="stars"><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg></span><span class="note">10/10</span></div><blockquote lang="es">«Nos ha gustado mucho la comida, el servicio muy amable y el ambiente excelente. Repetiremos.»</blockquote><figcaption><span class="av">L</span><span><b>Lidia A.</b><small>TheFork</small></span></figcaption></figure>
+        <figure class="rcard"><div class="top-r"><span class="stars"><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg><svg class="ic"><use href="#i-star-fill"/></svg></span><span class="note">9,5/10</span></div><blockquote lang="es">«Estuvimos muy a gusto. Muy buena comida y buena relación calidad-precio.»</blockquote><figcaption><span class="av">A</span><span><b>Alfred M.</b><small>92 opiniones · TheFork</small></span></figcaption></figure>
+      </div>
+    </div>
+    <div class="wrap rev-more">
+      <a class="btn btn-ghost" href="https://www.thefork.es/restaurante/petit-muu-r842827" target="_blank" rel="noopener"><span>Ver las opiniones en TheFork</span></a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Petit+Muu+Braseria+Barcelona" target="_blank" rel="noopener"><span>Ver las reseñas en Google</span></a>
+    </div>
+  </section>
+
+  <section class="section" id="extras">
+    <div class="wrap">
+      <p class="eyebrow rv">Más motivos para venir</p>
+      <h2 class="rv">Para celebrar, <span class="hl">para regalar,</span> para la oficina.</h2>
+      <div class="extras">
+        <div class="card rv">
+          <span class="ic-lg"><svg class="ic"><use href="#i-cake"/></svg></span>
+          <h3>Tu cumpleaños, en la brasa</h3>
+          <p>Avísanos al reservar y el postre del homenajeado llega con vela y va por la casa. Nosotros ponemos la tarta, vosotros el ruido.</p>
+          <span class="sp"></span>
+          <a class="btn btn-ghost" href="#reserva" data-occ="Cumpleaños"><span>Reservar un cumpleaños</span></a>
+        </div>
+        <div class="card feat rv" style="--d:1">
+          <span class="ic-lg"><svg class="ic"><use href="#i-gift"/></svg></span>
+          <h3>Regala un Menú Fuego</h3>
+          <p>La tarjeta regalo para quien lo tiene todo menos una cena de chuletón. Te la mandamos por WhatsApp, lista para reenviar o imprimir.</p>
+          <span class="big">69<small>€ para dos</small></span>
+          <span class="sp"></span>
+          <a class="btn btn-fire" id="gift" href="https://wa.me/34608633036" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp-logo"/></svg><span>Pedir mi tarjeta regalo</span></a>
+        </div>
+        <div class="card rv" style="--d:2">
+          <span class="ic-lg"><svg class="ic"><use href="#i-briefcase"/></svg></span>
+          <h3>Grupos y empresas</h3>
+          <p>Comidas de equipo, cenas de Navidad o celebraciones. Desde 8 personas te preparamos un menú cerrado a medida y te lo enviamos en 24 horas.</p>
+          <span class="sp"></span>
+          <a class="btn btn-ghost" href="#reserva" data-occ="Grupo o empresa"><span>Pedir menú para grupos</span></a>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="step rv"><h3>Elige día y hora</h3><p>Aquí abajo, en 30 segundos. Si quieres, añade el Menú Fuego o una pieza de La Cámara.</p></div>
+        <div class="step rv" style="--d:1"><h3>Te confirmamos por WhatsApp</h3><p>Nos llega tu reserva con todo apuntado y te respondemos con la mesa confirmada.</p></div>
+        <div class="step rv" style="--d:2"><h3>Ven con hambre</h3><p>La brasa encendida, tu pieza guardada y el vino listo. Sin esperas en la puerta.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section peach" id="preguntas">
+    <div class="wrap faq-grid">
+      <div>
+        <p class="eyebrow rv">Preguntas frecuentes</p>
+        <h2 class="rv">Lo que nos <span class="hl">preguntan</span></h2>
+        <p class="lead rv">¿No encuentras la tuya? Escríbenos por WhatsApp al 608 63 30 36 y te contestamos enseguida.</p>
+      </div>
+      <div class="faq rv">
+        <details open><summary>¿Hace falta reservar?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Te lo recomendamos, sobre todo de jueves a domingo. Así te guardamos sitio junto a la brasa, sin esperas, y si quieres una pieza concreta de La Cámara la tenemos lista.</p></details>
+        <details><summary>¿Qué incluye el Menú Fuego?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Para dos personas: 4 croquetas caseras (jamón 5J y cecina Black Angus), pimientos de Padrón, chuletón de ternera de Girona madurado 30 días de 1,1 kg con patatas caseras, parmentier trufada y tarta de queso para compartir. 69 €, bebida aparte, solo con reserva directa.</p></details>
+        <details><summary>¿Qué carne trabajáis?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Ternera de Girona, vaca frisona y vaca rubia nacional maduradas hasta 60 días, y Wagyu A5 japonés. Cada pieza se hace al momento sobre carbón natural.</p></details>
+        <details><summary>¿Tenéis opciones vegetarianas?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Sí. Hay platos vegetarianos y guarniciones para todos. Si tienes alguna alergia o intolerancia, dínoslo al reservar y te orientamos en sala.</p></details>
+        <details><summary>¿Aceptáis grupos grandes?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Sí, con reserva previa. Desde 8 personas te preparamos un menú cerrado a medida para que todo vaya rodado.</p></details>
+        <details><summary>¿Dónde puedo aparcar?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Hay varios parkings públicos a menos de 100 metros, en Carrer d'Aribau y Carrer de Provença. En metro, Urgell (L1) y Hospital Clínic (L5) quedan a menos de 5 minutos a pie.</p></details>
+        <details><summary>¿Qué día cerráis?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Los martes, que es el día de descanso del equipo. El resto de la semana abrimos a mediodía y por la noche.</p></details>
+        <details><summary>¿Hacéis comida para llevar?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Sí, puedes pedir a domicilio a través de Glovo.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ubicacion">
+    <div class="wrap">
+      <p class="eyebrow rv">Dónde estamos</p>
+      <h2 class="rv">En el corazón del <span class="hl">Eixample.</span></h2>
+      <p class="lead rv">Plaça del Doctor Letamendi, 28. Una de las plazas más agradables del centro, con árboles y terrazas, a pocos minutos de Rambla de Catalunya.</p>
+      <div class="map-wrap rv">
+        <iframe id="map" title="Mapa de Petit Muu Braseria" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Petit%20Muu%20Braseria%2C%20Pla%C3%A7a%20del%20Doctor%20Letamendi%2028%2C%2008007%20Barcelona&amp;z=16&amp;hl=es&amp;output=embed"></iframe>
+        <button class="map-shield" type="button" aria-label="Activa el mapa"><span>Haz clic para mover el mapa</span></button>
+        <div class="map-card">
+          <img class="logo-s" src="img/logo.png" alt="" width="72" height="72">
+          <p class="addr">Plaça del Doctor Letamendi, 28<br>08007 Barcelona</p>
+          <p class="sub">L'Eixample · junto a Carrer d'Aribau</p>
+          <div class="open-now" id="open-now"><i></i><span>Abierto</span></div>
+          <table class="hours">
+            <tr data-days="1 3 4"><td>Lun, mié y jue</td><td>12:30–16:00 · 19:30–23:30</td></tr>
+            <tr data-days="5 6 0"><td>Vie, sáb y dom</td><td>12:30–17:00 · 19:30–23:30</td></tr>
+            <tr data-days="2"><td>Martes</td><td>Descanso del equipo</td></tr>
+          </table>
+          <div class="btns">
+            <a class="btn btn-fire" href="https://www.google.com/maps/dir/?api=1&amp;destination=Petit+Muu+Braseria+Pla%C3%A7a+del+Doctor+Letamendi+28+Barcelona" target="_blank" rel="noopener"><svg class="ic"><use href="#i-map-pin"/></svg><span>Cómo llegar</span></a>
+            <a class="btn btn-ghost" href="tel:+34608633036"><svg class="ic"><use href="#i-phone"/></svg><span>Llamar</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="getting">
+        <div class="rv"><svg class="ic"><use href="#i-train"/></svg><span><b>Metro</b><span>Urgell (L1) y Hospital Clínic (L5), a menos de 5 minutos.</span></span></div>
+        <div class="rv" style="--d:1"><svg class="ic"><use href="#i-car"/></svg><span><b>Parking</b><span>Públicos en Aribau y Provença, a menos de 100 m.</span></span></div>
+        <div class="rv" style="--d:2"><svg class="ic"><use href="#i-map-pin"/></svg><span><b>A pie</b><span>A unos minutos de Rambla de Catalunya y Passeig de Gràcia.</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark" id="reserva">
+    <div class="wrap">
+      <p class="eyebrow rv">Reserva directa</p>
+      <h2 class="rv">Tu mesa, <span class="hl">junto a la brasa.</span></h2>
+      <p class="lead rv">Elige día, hora y cuántos sois. Te preparamos el mensaje con todo apuntado y te confirmamos por WhatsApp.</p>
+      <div class="book">
+        <form class="builder rv" id="builder" onsubmit="return false">
+          <h3>1 · ¿Cuándo venís?</h3>
+          <div class="fld">
+            <input class="date" type="date" id="f-date" aria-label="Fecha">
+            <div class="seg" role="radiogroup" aria-label="Turno">
+              <input type="radio" name="turno" id="tu-c" value="comida"><label for="tu-c">Comida</label>
+              <input type="radio" name="turno" id="tu-n" value="cena" checked><label for="tu-n">Cena</label>
+            </div>
+          </div>
+          <div class="chipset" id="f-hours" role="radiogroup" aria-label="Hora"></div>
+          <p class="closed-msg" id="f-closed" aria-live="polite"></p>
+          <div class="sep"></div>
+          <h3>2 · ¿Cuántos sois?</h3>
+          <div class="pax">
+            <button type="button" id="pax-m" aria-label="Uno menos">−</button>
+            <output id="pax" aria-live="polite">2</output>
+            <button type="button" id="pax-p" aria-label="Uno más">+</button>
+            <small id="pax-l">personas</small>
+          </div>
+          <div class="sep"></div>
+          <h3>3 · ¿Celebráis algo?</h3>
+          <div class="chipset" id="f-occ">
+            <input type="radio" name="occ" id="o-0" value="" checked><label for="o-0">Nada en especial</label>
+            <input type="radio" name="occ" id="o-1" value="Cumpleaños"><label for="o-1"><svg class="ic"><use href="#i-cake"/></svg>Cumpleaños</label>
+            <input type="radio" name="occ" id="o-2" value="Aniversario"><label for="o-2"><svg class="ic"><use href="#i-heart"/></svg>Aniversario</label>
+            <input type="radio" name="occ" id="o-3" value="Comida de negocios"><label for="o-3"><svg class="ic"><use href="#i-briefcase"/></svg>Negocios</label>
+            <input type="radio" name="occ" id="o-4" value="Grupo o empresa"><label for="o-4"><svg class="ic"><use href="#i-users"/></svg>Grupo o empresa</label>
+          </div>
+          <label class="opt-f"><input type="checkbox" id="f-fuego"><span>Queremos el <b>Menú Fuego</b>: croquetas, chuletón de 1,1 kg, guarniciones y tarta de queso. 69 € para dos.</span></label>
+          <div class="piece" id="f-piece"><span><b id="piece-t"></b></span><button type="button" id="piece-x" aria-label="Quitar la pieza"><svg class="ic"><use href="#i-x"/></svg></button></div>
+        </form>
+        <aside class="ticket rv" style="--d:1" aria-live="polite">
+          <span class="lbl">Tu reserva</span>
+          <div class="when" id="t-when">–</div>
+          <div class="row"><span>Comensales</span><span id="t-pax">2</span></div>
+          <div class="row" id="r-occ" hidden><span>Ocasión</span><span id="t-occ"></span></div>
+          <div class="row" id="r-fuego" hidden><span>Menú Fuego</span><span id="t-fuego"></span></div>
+          <div class="row" id="r-piece" hidden><span>Pieza reservada</span><span id="t-piece"></span></div>
+          <p class="warn" id="t-warn"></p>
+          <a class="btn btn-fire" id="t-wa" href="https://wa.me/34608633036" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp-logo"/></svg><span>Enviar reserva por WhatsApp</span></a>
+          <a class="btn btn-line" href="tel:+34608633036"><svg class="ic"><use href="#i-phone"/></svg><span>Prefiero llamar: 608 63 30 36</span></a>
+          <p class="note"><svg class="ic"><use href="#i-shield-check"/></svg><span>Reserva gratuita. Te confirmamos la mesa por WhatsApp.</span></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <img src="img/brasa-fuego.jpg" alt="" loading="lazy">
+    <div class="wrap">
+      <h2 class="rv">La brasa ya está <span class="hl">encendida.</span></h2>
+      <p class="lead rv" id="final-lead" style="margin:24px auto 0">Reserva en 30 segundos y ven con hambre.</p>
+      <div class="ctas rv">
+        <a class="btn btn-fire" href="#reserva" data-fuego><svg class="ic"><use href="#i-flame"/></svg><span>Reservar el Menú Fuego</span></a>
+        <a class="btn btn-ghost" href="tel:+34608633036"><svg class="ic"><use href="#i-phone"/></svg><span>608 63 30 36</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="sage">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Petit Muu Braseria, inicio"><img src="img/logo.png" alt="Petit Muu Braseria" width="96" height="96"></a>
+    <nav class="links" aria-label="Pie de página">
+      <a href="#menu-fuego">Menú Fuego</a>
+      <a href="#camara">La Cámara</a>
+      <a href="#carta">Carta</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#ubicacion">Dónde estamos</a>
+      <a href="mailto:braseriapetitmuu@gmail.com">braseriapetitmuu@gmail.com</a>
+    </nav>
+    <div class="soc">
+      <a href="https://www.instagram.com/petit__muu/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-instagram-logo"/></svg></a>
+      <a href="https://wa.me/34608633036" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ic"><use href="#i-whatsapp-logo"/></svg></a>
+      <a href="tel:+34608633036" aria-label="Teléfono"><svg class="ic"><use href="#i-phone"/></svg></a>
+    </div>
+    <div class="copy"><span>© <span id="y">2026</span> Petit Muu Braseria. Plaça del Doctor Letamendi, 28 · 08007 Barcelona.</span><span>Aviso legal · Privacidad</span></div>
+  </div>
+</footer>
+
+<div class="bar" role="group" aria-label="Acciones rápidas">
+  <a class="btn btn-ghost" href="tel:+34608633036" aria-label="Llamar"><svg class="ic"><use href="#i-phone"/></svg></a>
+  <a class="btn btn-fire" href="#reserva"><svg class="ic"><use href="#i-calendar-check"/></svg><span>Reservar mesa</span></a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+  (function () {
+    var WA = '34608633036';
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Reviews loop: duplicate the cards once (hidden from screen readers) and set a calm reading speed
+    (function () {
+      var box = document.getElementById('revs');
+      if (!box || !document.documentElement.classList.contains('motion')) return;
+      var track = box.querySelector('.track');
+      var cards = Array.prototype.slice.call(track.children);
+      cards.forEach(function (c) { var k = c.cloneNode(true); k.setAttribute('aria-hidden', 'true'); track.appendChild(k); });
+      var fit = function () {
+        var gap = parseFloat(getComputedStyle(track).columnGap) || 18;
+        var half = cards.reduce(function (w, c) { return w + c.getBoundingClientRect().width + gap; }, 0);
+        track.style.setProperty('--shift', -half + 'px');
+        track.style.setProperty('--dur', Math.round(half / 34) + 's');
+      };
+      fit();
+      window.addEventListener('resize', fit);
+      box.addEventListener('touchstart', function () { box.classList.toggle('hold'); }, { passive: true });
+    })();
+
+    // ---------- Languages (ES source, CA and EN translations) ----------
+    // Each entry: Spanish text exactly as on the page -> [Catalan, English].
+    var T = [
+      // navigation
+      ['Menú Fuego', 'Menú Foc', 'Fire Menu'],
+      ['La Cámara', 'La Cambra', 'The Chamber'],
+      ['Cachopo', 'Cachopo', 'Cachopo'],
+      ['Carta', 'Carta', 'Menu'],
+      ['El local', 'El local', 'The room'],
+      ['Opiniones', 'Opinions', 'Reviews'],
+      ['Dónde estamos', 'On som', 'Find us'],
+      ['Reserva', 'Reserva', 'Book'],
+      ['Reservar mesa', 'Reservar taula', 'Book a table'],
+      ['Preguntas', 'Preguntes', 'FAQ'],
+      // hero
+      ['Brasería en l\'Eixample · Plaça Letamendi', 'Braseria a l\'Eixample · Plaça Letamendi', 'Grill house in l\'Eixample · Plaça Letamendi'],
+      ['Aquí la carne', 'Aquí la carn', 'Here, meat'],
+      ['se respeta.', 'es respecta.', 'gets respect.'],
+      ['Chuletón madurado hasta 60 días, Wagyu A5 japonés y el cachopo del que habla medio Barcelona. Todo sobre brasa de carbón natural, al punto que tú pidas.', 'Txuletó madurat fins a 60 dies, Wagyu A5 japonès i el cachopo del qual parla mitja Barcelona. Tot sobre brasa de carbó natural, al punt que tu demanis.', 'Rib steaks dry-aged up to 60 days, Japanese A5 Wagyu and the cachopo half of Barcelona talks about. All over natural charcoal, cooked exactly how you ask.'],
+      ['Quiero el Menú Fuego', 'Vull el Menú Foc', 'I want the Fire Menu'],
+      ['Ver la carta', 'Veure la carta', 'See the menu'],
+      ['opiniones', 'opinions', 'reviews'],
+      ['Carbón natural.', 'Carbó natural.', 'Natural charcoal.'],
+      ['Carne con alma.', 'Carn amb ànima.', 'Meat with soul.'],
+      ['1.704 opiniones entre TheFork y Google lo han dejado por escrito.', '1.704 opinions entre TheFork i Google ho han deixat per escrit.', '1,704 reviews on TheFork and Google have put it in writing.'],
+      // proof
+      ['de nota media con 1.227 opiniones verificadas', 'de nota mitjana amb 1.227 opinions verificades', 'average score from 1,227 verified reviews'],
+      ['estrellas de media con 477 reseñas', 'estrelles de mitjana amb 477 ressenyes', 'star average from 477 reviews'],
+      ['opiniones nuevas en los últimos 30 días', 'opinions noves en els últims 30 dies', 'new reviews in the last 30 days'],
+      ['días de maduración en nuestros mejores chuletones', 'dies de maduració als nostres millors txuletons', 'days of dry-ageing on our best rib steaks'],
+      // offer
+      ['La oferta de la casa · para dos', 'L\'oferta de la casa · per a dos', 'The house offer · for two'],
+      ['El Menú', 'El Menú', 'The'],
+      ['Fuego.', 'Foc.', 'Fire Menu.'],
+      ['Una cena entera alrededor de un chuletón.', 'Un sopar sencer al voltant d\'un txuletó.', 'A whole dinner built around one rib steak.'],
+      ['Lo que más se pide en Petit Muu, en el orden en que hay que comerlo. Croquetas, chuletón madurado de kilo y pico, guarniciones, postre y nuestra garantía del punto. Para dos, por 69 €.', 'El que més es demana a Petit Muu, en l\'ordre en què s\'ha de menjar. Croquetes, txuletó madurat de quilo i escaig, guarnicions, postres i la nostra garantia del punt. Per a dos, per 69 €.', 'Petit Muu\'s most ordered dishes, in the order you should eat them. Croquettes, a dry-aged rib steak of over a kilo, sides, dessert and our cooking guarantee. For two, €69.'],
+      ['Croquetas de bienvenida', 'Croquetes de benvinguda', 'Welcome croquettes'],
+      ['Dos de jamón 5J y dos de cecina Black Angus: las que más se repiten en las reseñas. Llegan a la mesa mientras eliges el vino.', 'Dues de pernil 5J i dues de cecina Black Angus: les que més es repeteixen a les ressenyes. Arriben a taula mentre tries el vi.', 'Two 5J ham and two Black Angus cecina: the ones our reviews keep mentioning. They land on the table while you pick the wine.'],
+      ['Chuletón de Girona, 1,1 kg', 'Txuletó de Girona, 1,1 kg', 'Girona rib steak, 1.1 kg'],
+      ['Ternera de Girona madurada 30 días, sellada sobre carbón natural y servida en pizarra caliente con sal en escamas. Para compartir, sin quedarse corto.', 'Vedella de Girona madurada 30 dies, segellada sobre carbó natural i servida en pissarra calenta amb sal en escates. Per compartir, sense quedar-se curt.', 'Girona beef dry-aged for 30 days, seared over natural charcoal and served on a hot slate with flaky salt. Made to share, with plenty to go round.'],
+      ['30 días de maduración', '30 dies de maduració', '30 days dry-aged'],
+      ['Al punto que pidas', 'Al punt que demanis', 'Cooked how you ask'],
+      ['Te preguntamos cómo os gusta y el parrillero lo respeta. Si no llega a la mesa como lo pediste, lo hacemos otra vez.', 'Et preguntem com us agrada i el graellaire ho respecta. Si no arriba a taula com ho vas demanar, el tornem a fer.', 'We ask how you like it and the grill cook sticks to it. If it does not reach the table the way you asked, we cook it again.'],
+      ['Garantía Punto Perfecto', 'Garantia Punt Perfecte', 'Perfect Cook Guarantee'],
+      ['Dos guarniciones y pimientos', 'Dues guarnicions i pebrots', 'Two sides and peppers'],
+      ['Patatas fritas caseras, parmentier de patata trufada y una ración de pimientos de Padrón para el centro de la mesa.', 'Patates fregides casolanes, parmentier de patata tòfonada i una ració de pebrots de Padrón per al centre de la taula.', 'Homemade chips, truffled potato parmentier and a plate of Padrón peppers for the middle of the table.'],
+      ['Tarta de queso y sobremesa', 'Pastís de formatge i sobretaula', 'Cheesecake and no rush'],
+      ['Nuestra tarta de queso para compartir. Y nadie os mete prisa: la mesa es vuestra hasta el café.', 'El nostre pastís de formatge per compartir. I ningú no us fa córrer: la taula és vostra fins al cafè.', 'Our cheesecake to share. And nobody rushes you: the table is yours until coffee.'],
+      ['Lo que llega a la mesa', 'El que arriba a taula', 'What reaches the table'],
+      ['4 croquetas caseras', '4 croquetes casolanes', '4 homemade croquettes'],
+      ['Jamón 5J y cecina Black Angus', 'Pernil 5J i cecina Black Angus', '5J ham and Black Angus cecina'],
+      ['Pimientos de Padrón', 'Pebrots de Padrón', 'Padrón peppers'],
+      ['Chuletón de ternera de Girona · 1,1 kg', 'Txuletó de vedella de Girona · 1,1 kg', 'Girona beef rib steak · 1.1 kg'],
+      ['Madurado 30 días, con guarnición', 'Madurat 30 dies, amb guarnició', 'Dry-aged 30 days, with a side'],
+      ['Parmentier de patata trufada', 'Parmentier de patata tòfonada', 'Truffled potato parmentier'],
+      ['Tarta de queso para compartir', 'Pastís de formatge per compartir', 'Cheesecake to share'],
+      ['Incluida', 'Inclosa', 'Included'],
+      ['Precio en carta', 'Preu a la carta', 'Menu price'],
+      ['para dos personas', 'per a dues persones', 'for two people'],
+      ['Te ahorras 20,30 € y no tienes que pensar qué pedir.', 'T\'estalvies 20,30 € i no has de pensar què demanar.', 'You save €20.30 and do not have to think about what to order.'],
+      ['Reservar mi Menú Fuego', 'Reservar el meu Menú Foc', 'Book my Fire Menu'],
+      ['Sube a vaca rubia 60 días (900 g)', 'Puja a vaca rossa 60 dies (900 g)', 'Upgrade to 60-day blond cow (900 g)'],
+      ['Añade 100 g de Wagyu A5', 'Afegeix 100 g de Wagyu A5', 'Add 100 g of A5 Wagyu'],
+      ['Solo con reserva directa: web, WhatsApp o teléfono. Bebida aparte.', 'Només amb reserva directa: web, WhatsApp o telèfon. Beguda a part.', 'Direct bookings only: website, WhatsApp or phone. Drinks not included.'],
+      ['Poco hecho, al punto o hecho: tú decides y lo apuntamos en la comanda. Si la carne no llega a la mesa como la pediste, te hacemos una pieza nueva. Sin discutir y sin cobrarla dos veces.', 'Poc fet, al punt o fet: tu decideixes i ho apuntem a la comanda. Si la carn no arriba a taula com la vas demanar, et fem una peça nova. Sense discutir i sense cobrar-la dues vegades.', 'Rare, medium or well done: you choose and we write it on the order. If the meat does not reach the table the way you asked, we cook you a new piece. No arguing, and we never charge twice.'],
+      // camara
+      ['Elige tu pieza.', 'Tria la teva peça.', 'Pick your cut.'],
+      ['Te la guardamos.', 'Te la guardem.', 'We keep it for you.'],
+      ['Cuatro carnes, de la ternera de Girona al Wagyu A5 japonés. Mira el precio exacto por peso y resérvala con tu mesa, para que nadie se la lleve antes.', 'Quatre carns, de la vedella de Girona al Wagyu A5 japonès. Mira el preu exacte per pes i reserva-la amb la teva taula, perquè ningú no se l\'endugui abans.', 'Four kinds of beef, from Girona veal to Japanese A5 Wagyu. See the exact price by weight and book it with your table, so nobody takes it first.'],
+      ['Ternera de Girona', 'Vedella de Girona', 'Girona beef'],
+      ['Vaca frisona', 'Vaca frisona', 'Friesian cow'],
+      ['Vaca rubia', 'Vaca rossa', 'Blond cow'],
+      ['30 días · 55 €/kg', '30 dies · 55 €/kg', '30 days · €55/kg'],
+      ['60 días · 88 €/kg', '60 dies · 88 €/kg', '60 days · €88/kg'],
+      ['60 días · 108 €/kg', '60 dies · 108 €/kg', '60 days · €108/kg'],
+      ['Japón · 300 €/kg', 'Japó · 300 €/kg', 'Japan · €300/kg'],
+      ['Ternura', 'Tendresa', 'Tenderness'],
+      ['Grasa infiltrada', 'Greix infiltrat', 'Marbling'],
+      ['Intensidad', 'Intensitat', 'Intensity'],
+      ['Reservar con esta pieza', 'Reservar amb aquesta peça', 'Book with this cut'],
+      ['Elige la carne', 'Tria la carn', 'Choose the beef'],
+      ['Elige el peso', 'Tria el pes', 'Choose the weight'],
+      // cachopo
+      ['El plato estrella', 'El plat estrella', 'The star dish'],
+      ['El cachopo que se', 'El cachopo que es', 'The cachopo people'],
+      ['viene a probar.', 've a tastar.', 'come here for.'],
+      ['Filete de ternera relleno de queso Havarti y jamón ibérico, rebozado hasta que cruje. Es la palabra que más sale en nuestras reseñas de Google. Mucha gente cruza Barcelona solo por él.', 'Filet de vedella farcit de formatge Havarti i pernil ibèric, arrebossat fins que cruix. És la paraula que més surt a les nostres ressenyes de Google. Molta gent creua Barcelona només per ell.', 'A beef fillet stuffed with Havarti cheese and Iberian ham, breaded until it crunches. It is the word that comes up most in our Google reviews. Plenty of people cross Barcelona just for it.'],
+      ['Con patatas fritas caseras y pimientos de Padrón', 'Amb patates fregides casolanes i pebrots de Padrón', 'With homemade chips and Padrón peppers'],
+      ['Generoso: pensado para compartir entre dos', 'Generós: pensat per compartir entre dos', 'Generous: made to share between two'],
+      ['Recién hecho, nunca precocinado', 'Acabat de fer, mai precuinat', 'Made to order, never pre-cooked'],
+      ['reseñas lo nombran', 'ressenyes l\'anomenen', 'reviews mention it'],
+      ['Maüra B. · Local Guide en Google', 'Maüra B. · Local Guide a Google', 'Maüra B. · Google Local Guide'],
+      ['Reservar mesa para el cachopo', 'Reservar taula per al cachopo', 'Book a table for the cachopo'],
+      // carta
+      ['La carta', 'La carta', 'The menu'],
+      ['Del carbón a la mesa,', 'Del carbó a la taula,', 'From the coals to your table,'],
+      ['sin atajos.', 'sense dreceres.', 'no shortcuts.'],
+      ['Precio medio por persona: unos 30 €. Todas las carnes a la brasa incluyen una guarnición a elegir.', 'Preu mitjà per persona: uns 30 €. Totes les carns a la brasa inclouen una guarnició a triar.', 'Average price per person: about €30. Every grilled meat comes with a side of your choice.'],
+      ['A la brasa', 'A la brasa', 'Grilled'],
+      ['Para picar', 'Per picar', 'To share'],
+      ['Huevos y tablas', 'Ous i taules', 'Eggs and boards'],
+      ['Especiales', 'Especials', 'Specials'],
+      ['Hamburguesas', 'Hamburgueses', 'Burgers'],
+      ['Del mar', 'Del mar', 'From the sea'],
+      ['Postres', 'Postres', 'Desserts'],
+      ['Filtrar la carta', 'Filtrar la carta', 'Filter the menu'],
+      ['Chuletón de ternera de Girona', 'Txuletó de vedella de Girona', 'Girona beef rib steak'],
+      ['Chuletón de vaca frisona premium', 'Txuletó de vaca frisona prèmium', 'Premium Friesian cow rib steak'],
+      ['Chuletón de vaca rubia nacional', 'Txuletó de vaca rossa nacional', 'Spanish blond cow rib steak'],
+      ['Wagyu A5 japonés', 'Wagyu A5 japonès', 'Japanese A5 Wagyu'],
+      ['Madurado 30 días · 600 g 33 € · 700 g 38,50 € · 900 g 49,50 € · 1.100 g 60,50 €', 'Madurat 30 dies · 600 g 33 € · 700 g 38,50 € · 900 g 49,50 € · 1.100 g 60,50 €', 'Dry-aged 30 days · 600 g €33 · 700 g €38.50 · 900 g €49.50 · 1,100 g €60.50'],
+      ['Madurado 60 días · 700 g 61,60 € · 900 g 79,20 € · 1.100 g 96,80 € · 1.300 g 114,40 €', 'Madurat 60 dies · 700 g 61,60 € · 900 g 79,20 € · 1.100 g 96,80 € · 1.300 g 114,40 €', 'Dry-aged 60 days · 700 g €61.60 · 900 g €79.20 · 1,100 g €96.80 · 1,300 g €114.40'],
+      ['Madurado 60 días · 700 g 75,60 € · 900 g 97,20 € · 1.100 g 118,80 € · 1.300 g 140,40 €', 'Madurat 60 dies · 700 g 75,60 € · 900 g 97,20 € · 1.100 g 118,80 € · 1.300 g 140,40 €', 'Dry-aged 60 days · 700 g €75.60 · 900 g €97.20 · 1,100 g €118.80 · 1,300 g €140.40'],
+      ['100 g 30 € · 300 g 90 € · 500 g 150 € · 700 g 210 €', '100 g 30 € · 300 g 90 € · 500 g 150 € · 700 g 210 €', '100 g €30 · 300 g €90 · 500 g €150 · 700 g €210'],
+      ['Entrecot de ternera', 'Entrecot de vedella', 'Beef entrecôte'],
+      ['Entraña de ternera', 'Entranya de vedella', 'Beef skirt steak'],
+      ['Tira de costilla de ternera', 'Tira de costella de vedella', 'Beef short rib strip'],
+      ['Chuletas de cordero lechal', 'Costelles de xai de llet', 'Milk-fed lamb chops'],
+      ['Solomillo de ternera con foie', 'Filet de vedella amb foie', 'Beef tenderloin with foie gras'],
+      ['Con parmentier trufada. No incluye guarnición.', 'Amb parmentier tòfonada. No inclou guarnició.', 'With truffled parmentier. Side not included.'],
+      ['Guarniciones', 'Guarnicions', 'Sides'],
+      ['Patatas fritas caseras · patatas de boniato · parmentier de patata trufada · arroz jazmín · ensalada verde · pimientos de Padrón', 'Patates fregides casolanes · patates de moniato · parmentier de patata tòfonada · arròs jazmí · amanida verda · pebrots de Padrón', 'Homemade chips · sweet potato fries · truffled potato parmentier · jasmine rice · green salad · Padrón peppers'],
+      ['Croquetas de jamón 5J', 'Croquetes de pernil 5J', '5J ham croquettes'],
+      ['Croquetas de cecina Black Angus', 'Croquetes de cecina Black Angus', 'Black Angus cecina croquettes'],
+      ['Caseras, por unidad', 'Casolanes, per unitat', 'Homemade, per piece'],
+      ['Bravas con virutas de chorizo de Jabugo', 'Braves amb encenalls de xoriço de Jabugo', 'Patatas bravas with Jabugo chorizo shavings'],
+      ['Patatas de boniato', 'Patates de moniato', 'Sweet potato fries'],
+      ['Ensaladilla rusa', 'Ensaladilla russa', 'Russian salad'],
+      ['Torrezno de Soria', 'Torrezno de Soria', 'Crispy Soria pork belly'],
+      ['Butifarra de ternera a la brasa', 'Botifarra de vedella a la brasa', 'Grilled beef sausage'],
+      ['Con chimichurri', 'Amb chimichurri', 'With chimichurri'],
+      ['Chistorra de buey', 'Xistorra de bou', 'Ox chistorra sausage'],
+      ['Calamares a la andaluza', 'Calamars a l\'andalusa', 'Fried squid rings'],
+      ['Calamarcitos con ajo y perejil', 'Calamarsets amb all i julivert', 'Baby squid with garlic and parsley'],
+      ['Boquerones en vinagre', 'Seitons en vinagre', 'Anchovies in vinegar'],
+      ['Pescadito frito', 'Peix fregit', 'Fried small fish'],
+      ['Queso brie rebozado', 'Formatge brie arrebossat', 'Breaded brie'],
+      ['5 unidades', '5 unitats', '5 pieces'],
+      ['Champiñones rellenos', 'Xampinyons farcits', 'Stuffed mushrooms'],
+      ['Con queso de cabra y jamón ibérico', 'Amb formatge de cabra i pernil ibèric', 'With goat cheese and Iberian ham'],
+      ['Fingers de pollo', 'Fingers de pollastre', 'Chicken fingers'],
+      ['Con mayonesa de bacon ahumado', 'Amb maionesa de bacó fumat', 'With smoked bacon mayo'],
+      ['Huevos estrellados con jamón 5J', 'Ous estavellats amb pernil 5J', 'Broken eggs with 5J ham'],
+      ['Huevos estrellados con cecina Black Angus', 'Ous estavellats amb cecina Black Angus', 'Broken eggs with Black Angus cecina'],
+      ['Huevos estrellados con foie', 'Ous estavellats amb foie', 'Broken eggs with foie gras'],
+      ['Huevos estrellados con gambas al ajillo', 'Ous estavellats amb gambes a l\'allet', 'Broken eggs with garlic prawns'],
+      ['Tabla de jamón 5J', 'Taula de pernil 5J', '5J ham board'],
+      ['Tabla de cecina Black Angus', 'Taula de cecina Black Angus', 'Black Angus cecina board'],
+      ['Tabla de 4 quesos', 'Taula de 4 formatges', '4-cheese board'],
+      ['Oveja, payoyo, brie y azul', 'Ovella, payoyo, brie i blau', 'Sheep, payoyo, brie and blue'],
+      ['Tabla de queso payoyo', 'Taula de formatge payoyo', 'Payoyo cheese board'],
+      ['Tabla de queso de oveja', 'Taula de formatge d\'ovella', 'Sheep cheese board'],
+      ['Cachopo supremo asturiano', 'Cachopo suprem asturià', 'Supreme Asturian cachopo'],
+      ['El más pedido', 'El més demanat', 'Most ordered'],
+      ['Ternera rellena de queso Havarti y jamón ibérico, con patatas caseras y pimientos de Padrón', 'Vedella farcida de formatge Havarti i pernil ibèric, amb patates casolanes i pebrots de Padrón', 'Beef stuffed with Havarti and Iberian ham, with homemade chips and Padrón peppers'],
+      ['Steak tartar de Petit Muu', 'Steak tàrtar de Petit Muu', 'Petit Muu steak tartare'],
+      ['Carpaccio de solomillo de Girona', 'Carpaccio de filet de Girona', 'Girona tenderloin carpaccio'],
+      ['Ternera de Girona, cecina Black Angus, cheddar, huevo campero, cebolla crujiente y salsa burger', 'Vedella de Girona, cecina Black Angus, cheddar, ou de pagès, ceba cruixent i salsa burger', 'Girona beef, Black Angus cecina, cheddar, free-range egg, crispy onion and burger sauce'],
+      ['Wagyu japonés de 180 g, provolone, salsa burger y cebolla caramelizada', 'Wagyu japonès de 180 g, provolone, salsa burger i ceba caramel·litzada', '180 g Japanese Wagyu, provolone, burger sauce and caramelised onion'],
+      ['Foie de oca', 'Foie d\'oca', 'Goose foie gras'],
+      ['Ternera, foie de oca, brie, cebolla caramelizada, mermelada de arándanos y rúcula', 'Vedella, foie d\'oca, brie, ceba caramel·litzada, melmelada de nabius i ruca', 'Beef, goose foie gras, brie, caramelised onion, blueberry jam and rocket'],
+      ['Ternera de Girona, cheddar y salsa burger', 'Vedella de Girona, cheddar i salsa burger', 'Girona beef, cheddar and burger sauce'],
+      ['Pulpo a la brasa', 'Pop a la brasa', 'Grilled octopus'],
+      ['Con parmentier', 'Amb parmentier', 'With parmentier'],
+      ['Lubina braseada a la donostiarra', 'Llobarro a la brasa a la donostiarra', 'Grilled sea bass, Donostia style'],
+      ['Corvina del Mediterráneo braseada', 'Corball del Mediterrani a la brasa', 'Grilled Mediterranean meagre'],
+      ['Con shiitakes salteados', 'Amb shiitakes saltats', 'With sautéed shiitakes'],
+      ['Tarta de queso', 'Pastís de formatge', 'Cheesecake'],
+      ['Brownie de chocolate', 'Brownie de xocolata', 'Chocolate brownie'],
+      ['Con crema de pistacho y helado de vainilla', 'Amb crema de festuc i gelat de vainilla', 'With pistachio cream and vanilla ice cream'],
+      ['Coulant de chocolate', 'Coulant de xocolata', 'Chocolate coulant'],
+      ['Con bola de vainilla', 'Amb bola de vainilla', 'With a scoop of vanilla'],
+      ['Tiramisú casero', 'Tiramisú casolà', 'Homemade tiramisu'],
+      ['Crema catalana', 'Crema catalana', 'Crema catalana'],
+      ['Flan con nata', 'Flam amb nata', 'Crème caramel with cream'],
+      ['Yogur griego con miel y crumble', 'Iogurt grec amb mel i crumble', 'Greek yoghurt with honey and crumble'],
+      ['Café irlandés', 'Cafè irlandès', 'Irish coffee'],
+      ['Bola de helado', 'Bola de gelat', 'Scoop of ice cream'],
+      ['Vainilla, chocolate, fresa, limón o mango', 'Vainilla, xocolata, maduixa, llimona o mango', 'Vanilla, chocolate, strawberry, lemon or mango'],
+      ['Tenemos platos vegetarianos y avisamos de alérgenos en sala.', 'Tenim plats vegetarians i informem dels al·lèrgens a sala.', 'We have vegetarian dishes and can advise on allergens at the table.'],
+      // local
+      ['Ladrillo, azulejo verde y', 'Maó, rajola verda i', 'Brick, green tiles and'],
+      ['brasa encendida.', 'brasa encesa.', 'live coals.'],
+      ['En la Plaça del Doctor Letamendi, a un paso de Rambla de Catalunya y Passeig de Gràcia. Un comedor cálido y amplio para cenar en pareja, con amigos o con toda la oficina.', 'A la Plaça del Doctor Letamendi, a un pas de la Rambla de Catalunya i el Passeig de Gràcia. Un menjador càlid i ampli per sopar en parella, amb amics o amb tota l\'oficina.', 'On Plaça del Doctor Letamendi, a step from Rambla de Catalunya and Passeig de Gràcia. A warm, roomy dining room for a date, friends or the whole office.'],
+      ['Metro Urgell (L1) y Hospital Clínic (L5)', 'Metro Urgell (L1) i Hospital Clínic (L5)', 'Metro Urgell (L1) and Hospital Clínic (L5)'],
+      ['Parkings a menos de 100 m', 'Pàrquings a menys de 100 m', 'Car parks under 100 m away'],
+      ['Grupos grandes con reserva', 'Grups grans amb reserva', 'Large groups by booking'],
+      ['Opciones vegetarianas', 'Opcions vegetarianes', 'Vegetarian options'],
+      // gallery
+      ['De la brasa a tu mesa', 'De la brasa a la teva taula', 'From the grill to your table'],
+      ['Fotos reales,', 'Fotos reals,', 'Real photos,'],
+      ['platos reales.', 'plats reals.', 'real plates.'],
+      ['@petit__muu · 16,8 mil seguidores', '@petit__muu · 16,8 mil seguidors', '@petit__muu · 16.8K followers'],
+      ['Huevos estrellados', 'Ous estavellats', 'Broken eggs'],
+      ['Steak tartar', 'Steak tàrtar', 'Steak tartare'],
+      ['Cachopo supremo', 'Cachopo suprem', 'Supreme cachopo'],
+      ['Cecina Black Angus', 'Cecina Black Angus', 'Black Angus cecina'],
+      ['Entrecot y boniato', 'Entrecot i moniato', 'Entrecôte and sweet potato'],
+      ['Solomillo con foie', 'Filet amb foie', 'Tenderloin with foie gras'],
+      ['Croquetas caseras', 'Croquetes casolanes', 'Homemade croquettes'],
+      ['Carpaccio de Girona', 'Carpaccio de Girona', 'Girona carpaccio'],
+      ['Gambas al ajillo', 'Gambes a l\'allet', 'Garlic prawns'],
+      ['Queso payoyo', 'Formatge payoyo', 'Payoyo cheese'],
+      ['¿Con hambre ya?', 'Ja tens gana?', 'Hungry yet?'],
+      ['Anterior', 'Anterior', 'Previous'],
+      ['Siguiente', 'Següent', 'Next'],
+      ['Galería de platos', 'Galeria de plats', 'Dish gallery'],
+      // reviews
+      ['1.704 opiniones.', '1.704 opinions.', '1,704 reviews.'],
+      ['Un mismo veredicto.', 'Un mateix veredicte.', 'One verdict.'],
+      ['Reseñas reales de TheFork y Google. Se repiten las mismas palabras: la calidad de la carne, el trato y que siempre vuelven.', 'Ressenyes reals de TheFork i Google. Es repeteixen les mateixes paraules: la qualitat de la carn, el tracte i que sempre hi tornen.', 'Real reviews from TheFork and Google. The same words keep coming back: the quality of the meat, the service, and that they always return.'],
+      ['1.227 opiniones', '1.227 opinions', '1,227 reviews'],
+      ['477 reseñas', '477 ressenyes', '477 reviews'],
+      ['Cliente de Google', 'Client de Google', 'Google reviewer'],
+      ['Local Guide · Google', 'Local Guide · Google', 'Local Guide · Google'],
+      ['155 opiniones · TheFork', '155 opinions · TheFork', '155 reviews · TheFork'],
+      ['52 opiniones · TheFork', '52 opinions · TheFork', '52 reviews · TheFork'],
+      ['92 opiniones · TheFork', '92 opinions · TheFork', '92 reviews · TheFork'],
+      ['Ver las opiniones en TheFork', 'Veure les opinions a TheFork', 'See the reviews on TheFork'],
+      ['Ver las reseñas en Google', 'Veure les ressenyes a Google', 'See the reviews on Google'],
+      ['Reseñas de clientes', 'Ressenyes de clients', 'Customer reviews'],
+      // extras
+      ['Más motivos para venir', 'Més motius per venir', 'More reasons to come'],
+      ['Para celebrar,', 'Per celebrar,', 'To celebrate,'],
+      ['para regalar,', 'per regalar,', 'to give,'],
+      ['para la oficina.', 'per a l\'oficina.', 'for the office.'],
+      ['Tu cumpleaños, en la brasa', 'El teu aniversari, a la brasa', 'Your birthday, by the grill'],
+      ['Avísanos al reservar y el postre del homenajeado llega con vela y va por la casa. Nosotros ponemos la tarta, vosotros el ruido.', 'Avisa\'ns en reservar i les postres de l\'homenatjat arriben amb espelma i van a càrrec de la casa. Nosaltres posem el pastís, vosaltres el soroll.', 'Tell us when you book and the birthday dessert arrives with a candle, on the house. We bring the cake, you bring the noise.'],
+      ['Reservar un cumpleaños', 'Reservar un aniversari', 'Book a birthday'],
+      ['Regala un Menú Fuego', 'Regala un Menú Foc', 'Give a Fire Menu'],
+      ['La tarjeta regalo para quien lo tiene todo menos una cena de chuletón. Te la mandamos por WhatsApp, lista para reenviar o imprimir.', 'La targeta regal per a qui ho té tot menys un sopar de txuletó. Te l\'enviem per WhatsApp, a punt per reenviar o imprimir.', 'The gift card for someone who has everything except a rib steak dinner. We send it on WhatsApp, ready to forward or print.'],
+      ['€ para dos', '€ per a dos', '€ for two'],
+      ['Pedir mi tarjeta regalo', 'Demanar la meva targeta regal', 'Get my gift card'],
+      ['Grupos y empresas', 'Grups i empreses', 'Groups and companies'],
+      ['Comidas de equipo, cenas de Navidad o celebraciones. Desde 8 personas te preparamos un menú cerrado a medida y te lo enviamos en 24 horas.', 'Dinars d\'equip, sopars de Nadal o celebracions. A partir de 8 persones et preparem un menú tancat a mida i te l\'enviem en 24 hores.', 'Team lunches, Christmas dinners or celebrations. From 8 people we put together a set menu for you and send it within 24 hours.'],
+      ['Pedir menú para grupos', 'Demanar menú per a grups', 'Ask for a group menu'],
+      ['Elige día y hora', 'Tria dia i hora', 'Pick a day and time'],
+      ['Aquí abajo, en 30 segundos. Si quieres, añade el Menú Fuego o una pieza de La Cámara.', 'Aquí sota, en 30 segons. Si vols, afegeix el Menú Foc o una peça de La Cambra.', 'Right below, in 30 seconds. Add the Fire Menu or a cut from The Chamber if you like.'],
+      ['Te confirmamos por WhatsApp', 'Et confirmem per WhatsApp', 'We confirm on WhatsApp'],
+      ['Nos llega tu reserva con todo apuntado y te respondemos con la mesa confirmada.', 'Ens arriba la teva reserva amb tot apuntat i et responem amb la taula confirmada.', 'Your booking reaches us with every detail and we reply with your table confirmed.'],
+      ['Ven con hambre', 'Vine amb gana', 'Come hungry'],
+      ['La brasa encendida, tu pieza guardada y el vino listo. Sin esperas en la puerta.', 'La brasa encesa, la teva peça guardada i el vi a punt. Sense esperes a la porta.', 'The coals lit, your cut set aside and the wine ready. No waiting at the door.'],
+      // faq
+      ['Preguntas frecuentes', 'Preguntes freqüents', 'FAQ'],
+      ['Lo que nos', 'El que ens', 'What people'],
+      ['preguntan', 'pregunten', 'ask us'],
+      ['¿No encuentras la tuya? Escríbenos por WhatsApp al 608 63 30 36 y te contestamos enseguida.', 'No hi trobes la teva? Escriu-nos per WhatsApp al 608 63 30 36 i et responem de seguida.', 'Not here? Message us on WhatsApp at +34 608 63 30 36 and we will reply right away.'],
+      ['¿Hace falta reservar?', 'Cal reservar?', 'Do I need to book?'],
+      ['Te lo recomendamos, sobre todo de jueves a domingo. Así te guardamos sitio junto a la brasa, sin esperas, y si quieres una pieza concreta de La Cámara la tenemos lista.', 'T\'ho recomanem, sobretot de dijous a diumenge. Així et guardem lloc a prop de la brasa, sense esperes, i si vols una peça concreta de La Cambra la tenim a punt.', 'We recommend it, especially Thursday to Sunday. That way we save you a spot by the grill with no wait, and if you want a specific cut from The Chamber, it is ready.'],
+      ['¿Qué incluye el Menú Fuego?', 'Què inclou el Menú Foc?', 'What is in the Fire Menu?'],
+      ['Para dos personas: 4 croquetas caseras (jamón 5J y cecina Black Angus), pimientos de Padrón, chuletón de ternera de Girona madurado 30 días de 1,1 kg con patatas caseras, parmentier trufada y tarta de queso para compartir. 69 €, bebida aparte, solo con reserva directa.', 'Per a dues persones: 4 croquetes casolanes (pernil 5J i cecina Black Angus), pebrots de Padrón, txuletó de vedella de Girona madurat 30 dies d\'1,1 kg amb patates casolanes, parmentier tòfonada i pastís de formatge per compartir. 69 €, beguda a part, només amb reserva directa.', 'For two: 4 homemade croquettes (5J ham and Black Angus cecina), Padrón peppers, a 1.1 kg Girona beef rib steak dry-aged 30 days with homemade chips, truffled parmentier and cheesecake to share. €69, drinks not included, direct bookings only.'],
+      ['¿Qué carne trabajáis?', 'Quina carn treballeu?', 'What beef do you serve?'],
+      ['Ternera de Girona, vaca frisona y vaca rubia nacional maduradas hasta 60 días, y Wagyu A5 japonés. Cada pieza se hace al momento sobre carbón natural.', 'Vedella de Girona, vaca frisona i vaca rossa nacional madurades fins a 60 dies, i Wagyu A5 japonès. Cada peça es fa al moment sobre carbó natural.', 'Girona beef, Friesian and Spanish blond cow dry-aged up to 60 days, and Japanese A5 Wagyu. Every piece is cooked to order over natural charcoal.'],
+      ['¿Tenéis opciones vegetarianas?', 'Teniu opcions vegetarianes?', 'Do you have vegetarian options?'],
+      ['Sí. Hay platos vegetarianos y guarniciones para todos. Si tienes alguna alergia o intolerancia, dínoslo al reservar y te orientamos en sala.', 'Sí. Hi ha plats vegetarians i guarnicions per a tothom. Si tens alguna al·lèrgia o intolerància, digues-nos-ho en reservar i t\'orientem a sala.', 'Yes. There are vegetarian dishes and sides for everyone. If you have an allergy or intolerance, tell us when you book and we will guide you at the table.'],
+      ['¿Aceptáis grupos grandes?', 'Accepteu grups grans?', 'Do you take large groups?'],
+      ['Sí, con reserva previa. Desde 8 personas te preparamos un menú cerrado a medida para que todo vaya rodado.', 'Sí, amb reserva prèvia. A partir de 8 persones et preparem un menú tancat a mida perquè tot vagi rodat.', 'Yes, by booking ahead. From 8 people we prepare a set menu so everything runs smoothly.'],
+      ['¿Dónde puedo aparcar?', 'On puc aparcar?', 'Where can I park?'],
+      ['Hay varios parkings públicos a menos de 100 metros, en Carrer d\'Aribau y Carrer de Provença. En metro, Urgell (L1) y Hospital Clínic (L5) quedan a menos de 5 minutos a pie.', 'Hi ha diversos pàrquings públics a menys de 100 metres, al Carrer d\'Aribau i al Carrer de Provença. En metro, Urgell (L1) i Hospital Clínic (L5) queden a menys de 5 minuts a peu.', 'There are several public car parks under 100 metres away, on Carrer d\'Aribau and Carrer de Provença. By metro, Urgell (L1) and Hospital Clínic (L5) are under 5 minutes on foot.'],
+      ['¿Qué día cerráis?', 'Quin dia tanqueu?', 'Which day are you closed?'],
+      ['Los martes, que es el día de descanso del equipo. El resto de la semana abrimos a mediodía y por la noche.', 'Els dimarts, que és el dia de descans de l\'equip. La resta de la setmana obrim al migdia i al vespre.', 'Tuesdays, the team\'s day off. The rest of the week we open for lunch and dinner.'],
+      ['¿Hacéis comida para llevar?', 'Feu menjar per emportar?', 'Do you do takeaway?'],
+      ['Sí, puedes pedir a domicilio a través de Glovo.', 'Sí, pots demanar a domicili a través de Glovo.', 'Yes, you can order delivery through Glovo.'],
+      // location
+      ['En el corazón del', 'Al cor de', 'In the heart of'],
+      ['Eixample.', 'l\'Eixample.', 'l\'Eixample.'],
+      ['Plaça del Doctor Letamendi, 28. Una de las plazas más agradables del centro, con árboles y terrazas, a pocos minutos de Rambla de Catalunya.', 'Plaça del Doctor Letamendi, 28. Una de les places més agradables del centre, amb arbres i terrasses, a pocs minuts de la Rambla de Catalunya.', 'Plaça del Doctor Letamendi, 28. One of the nicest squares in the centre, with trees and terraces, minutes from Rambla de Catalunya.'],
+      ['L\'Eixample · junto a Carrer d\'Aribau', 'L\'Eixample · al costat del Carrer d\'Aribau', 'L\'Eixample · by Carrer d\'Aribau'],
+      ['Lun, mié y jue', 'Dl, dc i dj', 'Mon, Wed & Thu'],
+      ['Vie, sáb y dom', 'Dv, ds i dg', 'Fri, Sat & Sun'],
+      ['Martes', 'Dimarts', 'Tuesday'],
+      ['Descanso del equipo', 'Descans de l\'equip', 'Team day off'],
+      ['Cómo llegar', 'Com arribar', 'Directions'],
+      ['Llamar', 'Trucar', 'Call'],
+      ['Haz clic para mover el mapa', 'Fes clic per moure el mapa', 'Click to move the map'],
+      ['Metro', 'Metro', 'Metro'],
+      ['Urgell (L1) y Hospital Clínic (L5), a menos de 5 minutos.', 'Urgell (L1) i Hospital Clínic (L5), a menys de 5 minuts.', 'Urgell (L1) and Hospital Clínic (L5), under 5 minutes away.'],
+      ['Parking', 'Pàrquing', 'Parking'],
+      ['Públicos en Aribau y Provença, a menos de 100 m.', 'Públics a Aribau i Provença, a menys de 100 m.', 'Public car parks on Aribau and Provença, under 100 m.'],
+      ['A pie', 'A peu', 'On foot'],
+      ['A unos minutos de Rambla de Catalunya y Passeig de Gràcia.', 'A pocs minuts de la Rambla de Catalunya i el Passeig de Gràcia.', 'A few minutes from Rambla de Catalunya and Passeig de Gràcia.'],
+      // booking
+      ['Reserva directa', 'Reserva directa', 'Book direct'],
+      ['Tu mesa,', 'La teva taula,', 'Your table,'],
+      ['junto a la brasa.', 'a prop de la brasa.', 'by the grill.'],
+      ['Elige día, hora y cuántos sois. Te preparamos el mensaje con todo apuntado y te confirmamos por WhatsApp.', 'Tria dia, hora i quants sou. Et preparem el missatge amb tot apuntat i et confirmem per WhatsApp.', 'Pick the day, time and how many of you. We write the message with every detail and confirm on WhatsApp.'],
+      ['1 · ¿Cuándo venís?', '1 · Quan veniu?', '1 · When are you coming?'],
+      ['Comida', 'Dinar', 'Lunch'],
+      ['Cena', 'Sopar', 'Dinner'],
+      ['2 · ¿Cuántos sois?', '2 · Quants sou?', '2 · How many of you?'],
+      ['personas', 'persones', 'people'],
+      ['3 · ¿Celebráis algo?', '3 · Celebreu alguna cosa?', '3 · Celebrating anything?'],
+      ['Nada en especial', 'Res d\'especial', 'Nothing special'],
+      ['Cumpleaños', 'Aniversari', 'Birthday'],
+      ['Aniversario', 'Aniversari de parella', 'Anniversary'],
+      ['Negocios', 'Negocis', 'Business'],
+      ['Grupo o empresa', 'Grup o empresa', 'Group or company'],
+      ['Comida de negocios', 'Dinar de negocis', 'Business meal'],
+      ['Queremos el', 'Volem el', 'We want the'],
+      [': croquetas, chuletón de 1,1 kg, guarniciones y tarta de queso. 69 € para dos.', ': croquetes, txuletó d\'1,1 kg, guarnicions i pastís de formatge. 69 € per a dos.', ': croquettes, a 1.1 kg rib steak, sides and cheesecake. €69 for two.'],
+      ['Tu reserva', 'La teva reserva', 'Your booking'],
+      ['Comensales', 'Comensals', 'Guests'],
+      ['Ocasión', 'Ocasió', 'Occasion'],
+      ['Pieza reservada', 'Peça reservada', 'Reserved cut'],
+      ['Enviar reserva por WhatsApp', 'Enviar reserva per WhatsApp', 'Send booking on WhatsApp'],
+      ['Prefiero llamar: 608 63 30 36', 'Prefereixo trucar: 608 63 30 36', 'I would rather call: +34 608 63 30 36'],
+      ['Reserva gratuita. Te confirmamos la mesa por WhatsApp.', 'Reserva gratuïta. Et confirmem la taula per WhatsApp.', 'Free booking. We confirm your table on WhatsApp.'],
+      // final + footer
+      ['La brasa ya está', 'La brasa ja és', 'The coals are already'],
+      ['encendida.', 'encesa.', 'lit.'],
+      ['Reserva en 30 segundos y ven con hambre.', 'Reserva en 30 segons i vine amb gana.', 'Book in 30 seconds and come hungry.'],
+      ['Reservar el Menú Fuego', 'Reservar el Menú Foc', 'Book the Fire Menu'],
+      ['Aviso legal · Privacidad', 'Avís legal · Privacitat', 'Legal notice · Privacy'],
+      ['Petit Muu Braseria. Plaça del Doctor Letamendi, 28 · 08007 Barcelona.', 'Petit Muu Braseria. Plaça del Doctor Letamendi, 28 · 08007 Barcelona.', 'Petit Muu Braseria. Plaça del Doctor Letamendi, 28 · 08007 Barcelona.'],
+      // attributes
+      ['Capítulos', 'Capítols', 'Sections'],
+      ['Petit Muu Braseria, inicio', 'Petit Muu Braseria, inici', 'Petit Muu Braseria, home'],
+      ['Abrir el menú', 'Obrir el menú', 'Open menu'],
+      ['Menú móvil', 'Menú mòbil', 'Mobile menu'],
+      ['Principal', 'Principal', 'Main'],
+      ['Idioma', 'Idioma', 'Language'],
+      ['Petit Muu en cifras', 'Petit Muu en xifres', 'Petit Muu in numbers'],
+      ['Activa el mapa', 'Activa el mapa', 'Activate the map'],
+      ['Mapa de Petit Muu Braseria', 'Mapa de Petit Muu Braseria', 'Map of Petit Muu Braseria'],
+      ['Acciones rápidas', 'Accions ràpides', 'Quick actions'],
+      ['Pie de página', 'Peu de pàgina', 'Footer'],
+      ['Teléfono', 'Telèfon', 'Phone'],
+      ['Fecha', 'Data', 'Date'],
+      ['Turno', 'Torn', 'Sitting'],
+      ['Hora', 'Hora', 'Time'],
+      ['Uno menos', 'Un menys', 'One fewer'],
+      ['Uno más', 'Un més', 'One more'],
+      ['Quitar la pieza', 'Treure la peça', 'Remove the cut'],
+      // runtime strings
+      ['Abierto ahora · hasta las {h}', 'Obert ara · fins a les {h}', 'Open now · until {h}'],
+      ['Cerrado ahora · abrimos a las {h}', 'Tancat ara · obrim a les {h}', 'Closed now · opens at {h}'],
+      ['Cerrado · volvemos el miércoles a las 12:30', 'Tancat · tornem dimecres a les 12:30', 'Closed · back Wednesday at 12:30'],
+      ['Hoy descansamos · mañana a las 12:30', 'Avui descansem · demà a les 12:30', 'Closed today · back tomorrow at 12:30'],
+      ['Los martes descansamos. Elige otro día.', 'Els dimarts descansem. Tria un altre dia.', 'We are closed on Tuesdays. Pick another day.'],
+      ['Ese turno ya ha pasado. Elige otra hora o día.', 'Aquest torn ja ha passat. Tria una altra hora o dia.', 'That sitting has passed. Pick another time or day.'],
+      ['Elige día y hora', 'Tria dia i hora', 'Pick a day and time'],
+      ['Para 8 o más os llamamos para cerrar el menú de grupo.', 'Per a 8 o més us truquem per tancar el menú de grup.', 'For 8 or more we will call you to agree a group menu.'],
+      ['El Menú Fuego es para dos: os ponemos {n}.', 'El Menú Foc és per a dos: us en posem {n}.', 'The Fire Menu is for two: we will set {n}.'],
+      ['Sí, {n} para la mesa', 'Sí, {n} per a la taula', 'Yes, {n} for the table'],
+      ['¡Hola! Quiero reservar mesa en Petit Muu: {when}, {pax} personas.', 'Hola! Vull reservar taula a Petit Muu: {when}, {pax} persones.', 'Hi! I would like to book a table at Petit Muu: {when}, {pax} people.'],
+      [' Ocasión: {o}.', ' Ocasió: {o}.', ' Occasion: {o}.'],
+      [' Queremos {n} Menú Fuego.', ' Volem {n} Menú Foc.', ' We want {n} Fire Menu.'],
+      [' Por favor, guardadnos: {p}.', ' Si us plau, guardeu-nos: {p}.', ' Please set aside: {p}.'],
+      [' ¿Tenéis mesa?', ' Teniu taula?', ' Do you have a table?'],
+      ['Hola, quiero una tarjeta regalo del Menú Fuego (69 € para dos). ¿Cómo lo hacemos?', 'Hola, vull una targeta regal del Menú Foc (69 € per a dos). Com ho fem?', 'Hi, I would like a Fire Menu gift card (€69 for two). How do we do it?'],
+      ['días de maduración', 'dies de maduració', 'days dry-aged'],
+      ['grado de infiltración', 'grau d\'infiltració', 'marbling grade'],
+      ['Chuletón de vaca frisona', 'Txuletó de vaca frisona', 'Friesian cow rib steak'],
+      ['Chuletón de vaca rubia', 'Txuletó de vaca rossa', 'Blond cow rib steak'],
+      ['Tierna y jugosa, de sabor limpio. La puerta de entrada al chuletón y la que va en el Menú Fuego.', 'Tendra i sucosa, de sabor net. La porta d\'entrada al txuletó i la que va al Menú Foc.', 'Tender and juicy with a clean flavour. The way into rib steak, and the one in the Fire Menu.'],
+      ['Sesenta días en cámara y una grasa que se funde en la brasa. Sabor profundo, con notas de mantequilla y nuez.', 'Seixanta dies a la cambra i un greix que es fon a la brasa. Sabor profund, amb notes de mantega i nou.', 'Sixty days in the chamber and fat that melts over the coals. Deep flavour with notes of butter and walnut.'],
+      ['La más intensa de la casa. Vaca adulta, grasa amarilla y el sabor largo de una maduración de 60 días.', 'La més intensa de la casa. Vaca adulta, greix groc i el sabor llarg d\'una maduració de 60 dies.', 'The most intense on the menu. Mature cow, golden fat and the long finish of a 60-day dry-age.'],
+      ['La nota más alta de la clasificación japonesa. Se sirve en láminas finas y se deshace en la boca. Para probar al menos una vez.', 'La nota més alta de la classificació japonesa. Se serveix en làmines fines i es desfà a la boca. Per tastar com a mínim una vegada.', 'The top grade in the Japanese system. Served in thin slices that melt in the mouth. One to try at least once.'],
+      ['Para {n} personas', 'Per a {n} persones', 'For {n} people'],
+      ['Para {n} persona', 'Per a {n} persona', 'For {n} person'],
+      [' · incluye guarnición', ' · inclou guarnició', ' · side included'],
+      ['Degustación para {n}', 'Degustació per a {n}', 'Tasting for {n}'],
+      ['Chuletón de ternera de Girona de {w}', 'Txuletó de vedella de Girona de {w}', 'Girona beef rib steak, {w}'],
+      ['Chuletón de vaca frisona de {w}', 'Txuletó de vaca frisona de {w}', 'Friesian cow rib steak, {w}'],
+      ['Chuletón de vaca rubia de {w}', 'Txuletó de vaca rossa de {w}', 'Blond cow rib steak, {w}'],
+      ['Wagyu A5 japonés, {w}', 'Wagyu A5 japonès, {w}', 'Japanese A5 Wagyu, {w}'],
+      ['Hoy cocinamos hasta las 23:30. Reserva en 30 segundos y ven con hambre.', 'Avui cuinem fins a les 23:30. Reserva en 30 segons i vine amb gana.', 'We are cooking until 11:30 pm today. Book in 30 seconds and come hungry.']
+    ];
+    var DICT = {};
+    T.forEach(function (r) { DICT[r[0]] = { ca: r[1], en: r[2] }; });
+    var lang = 'es';
+    function t(es) { if (lang === 'es') return es; var e = DICT[es]; return e ? e[lang] : es; }
+    function money(n) {
+      var whole = Math.round(n * 100) % 100 === 0;
+      var s = whole ? String(Math.round(n)) : n.toFixed(2);
+      if (lang === 'en') return '€' + s;
+      return s.replace('.', ',') + ' €';
+    }
+
+    // Snapshot the Spanish source once: text nodes, attributes and the headings' original HTML.
+    var textNodes = [], attrEls = [], heads = [];
+    document.querySelectorAll('h1, h2').forEach(function (h) { heads.push({ el: h, es: h.innerHTML }); });
+    (function collect() {
+      var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: function (n) {
+        var p = n.parentElement;
+        if (!p || p.closest('script,style,svg,h1,h2,blockquote[lang],.dyn')) return NodeFilter.FILTER_REJECT;
+        return n.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      } });
+      var n;
+      while ((n = w.nextNode())) {
+        var m = n.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
+        var key = m[2].replace(/\s+/g, ' ');
+        if (DICT[key]) textNodes.push({ n: n, pre: m[1], key: key, post: m[3] });
+      }
+      document.querySelectorAll('[alt],[aria-label],[title]').forEach(function (el) {
+        if (el.closest('svg')) return;
+        ['alt', 'aria-label', 'title'].forEach(function (a) {
+          var v = el.getAttribute(a);
+          if (v && DICT[v.trim()]) attrEls.push({ el: el, a: a, key: v.trim() });
+        });
+      });
+    })();
+    function trHTML(html) {
+      var tmp = document.createElement('div'); tmp.innerHTML = html;
+      var w = document.createTreeWalker(tmp, NodeFilter.SHOW_TEXT), n;
+      while ((n = w.nextNode())) { var m = n.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/); var k = m[2].replace(/\s+/g, ' '); if (DICT[k]) n.nodeValue = m[1] + t(k) + m[3]; }
+      return tmp.innerHTML;
+    }
+    var map = document.getElementById('map');
+    function setLang(l) {
+      lang = l;
+      document.documentElement.lang = l;
+      textNodes.forEach(function (x) { x.n.nodeValue = x.pre + t(x.key) + x.post; });
+      attrEls.forEach(function (x) { x.el.setAttribute(x.a, t(x.key)); });
+      heads.forEach(function (h) { h.el.innerHTML = l === 'es' ? h.es : trHTML(h.es); h.el.removeAttribute('aria-label'); });
+      document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === l)); });
+      if (map) map.src = map.src.replace(/hl=\w+/, 'hl=' + l);
+      refresh();
+      try { localStorage.setItem('pm-lang', l); } catch (e) {}
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+    }
+
+    // ---------- Opening hours (Barcelona time) ----------
+    // Lunch 12:30 until 16:00 (Mon, Wed, Thu) or 17:00 (Fri-Sun); dinner 19:30-23:30; Tuesday closed.
+    function shifts(d) {
+      if (d === 2) return [];
+      return [[750, (d === 5 || d === 6 || d === 0) ? 1020 : 960], [1170, 1410]];
+    }
+    function hm(m) { var h = Math.floor(m / 60), mi = m % 60; return (lang === 'en' ? (h > 12 ? h - 12 : h) + (mi ? ':' + (mi < 10 ? '0' : '') + mi : '') + (h >= 12 ? ' pm' : ' am') : h + ':' + (mi < 10 ? '0' : '') + mi); }
+    function bcnNow() { return new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Madrid' })); }
+    function updateOpen() {
+      var el = document.getElementById('open-now'); if (!el) return;
+      var now = bcnNow(), d = now.getDay(), mins = now.getHours() * 60 + now.getMinutes();
+      var s = shifts(d), txt, open = false;
+      for (var i = 0; i < s.length; i++) if (mins >= s[i][0] && mins < s[i][1]) { open = true; txt = t('Abierto ahora · hasta las {h}').replace('{h}', hm(s[i][1])); }
+      if (!open) {
+        var next = null;
+        for (var j = 0; j < s.length; j++) if (mins < s[j][0]) { next = s[j][0]; break; }
+        if (next !== null) txt = t('Cerrado ahora · abrimos a las {h}').replace('{h}', hm(next));
+        else if (d === 2) txt = t('Hoy descansamos · mañana a las 12:30');
+        else if (d === 1) txt = t('Cerrado · volvemos el miércoles a las 12:30');
+        else txt = t('Cerrado ahora · abrimos a las {h}').replace('{h}', hm(750));
+      }
+      el.classList.toggle('closed', !open);
+      el.querySelector('span').textContent = txt;
+      document.querySelectorAll('.hours tr').forEach(function (tr) { tr.classList.toggle('today', (' ' + tr.getAttribute('data-days') + ' ').indexOf(' ' + d + ' ') > -1); });
+    }
+
+    // ---------- La Cámara: cut + weight -> exact price from the menu ----------
+    var CUTS = [
+      { name: 'Chuletón de ternera de Girona', short: 'Chuletón de ternera de Girona de {w}', days: 30, desc: 'Tierna y jugosa, de sabor limpio. La puerta de entrada al chuletón y la que va en el Menú Fuego.', m: [4, 2, 3], w: [[600, 33, 1], [700, 38.5, 2], [900, 49.5, 2], [1100, 60.5, 3]], def: 3 },
+      { name: 'Chuletón de vaca frisona', short: 'Chuletón de vaca frisona de {w}', days: 60, desc: 'Sesenta días en cámara y una grasa que se funde en la brasa. Sabor profundo, con notas de mantequilla y nuez.', m: [4, 4, 4], w: [[700, 61.6, 2], [900, 79.2, 2], [1100, 96.8, 3], [1300, 114.4, 3]], def: 1 },
+      { name: 'Chuletón de vaca rubia', short: 'Chuletón de vaca rubia de {w}', days: 60, desc: 'La más intensa de la casa. Vaca adulta, grasa amarilla y el sabor largo de una maduración de 60 días.', m: [3, 3, 5], w: [[700, 75.6, 2], [900, 97.2, 2], [1100, 118.8, 3], [1300, 140.4, 3]], def: 1 },
+      { name: 'Wagyu A5 japonés', short: 'Wagyu A5 japonés, {w}', days: 'A5', desc: 'La nota más alta de la clasificación japonesa. Se sirve en láminas finas y se deshace en la boca. Para probar al menos una vez.', m: [5, 5, 4], w: [[100, 30, 1], [300, 90, 3], [500, 150, 5], [700, 210, 7]], def: 0, wagyu: true }
+    ];
+    var cutI = 0, wI = 3, piece = null;
+    var cutBtns = document.querySelectorAll('.cuts button');
+    var weightsBox = document.querySelector('.weights');
+    function grams(g) { return g >= 1000 ? (lang === 'en' ? (g / 1000).toFixed(1) + ' kg' : String(g / 1000).replace('.', ',') + ' kg') : g + ' g'; }
+    function renderCut(animate) {
+      var c = CUTS[cutI], w = c.w[wI];
+      cutBtns.forEach(function (b, k) { b.setAttribute('aria-pressed', String(k === cutI)); });
+      document.querySelectorAll('.cut-photo img').forEach(function (im) { im.classList.toggle('on', +im.getAttribute('data-cut') === cutI); });
+      document.getElementById('c-days').textContent = c.days;
+      document.getElementById('c-days-l').textContent = t(c.wagyu ? 'grado de infiltración' : 'días de maduración');
+      document.getElementById('c-name').textContent = t(c.name);
+      document.getElementById('c-desc').textContent = t(c.desc);
+      document.querySelectorAll('.meter i').forEach(function (bar) {
+        var v = c.m[+bar.getAttribute('data-m')];
+        bar.querySelectorAll('span').forEach(function (s, k) { s.classList.toggle('on', k < v); });
+      });
+      weightsBox.innerHTML = '';
+      c.w.forEach(function (x, k) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.textContent = grams(x[0]); b.setAttribute('aria-pressed', String(k === wI));
+        b.addEventListener('click', function () { wI = k; renderCut(true); });
+        weightsBox.appendChild(b);
+      });
+      var pEl = document.getElementById('c-price');
+      if (animate && window.gsap && document.documentElement.classList.contains('motion')) {
+        var from = parseFloat(pEl.getAttribute('data-v') || w[1]), o = { v: from };
+        gsap.to(o, { v: w[1], duration: .6, ease: 'power3.out', onUpdate: function () { pEl.textContent = money(Math.round(o.v * 10) / 10); }, onComplete: function () { pEl.textContent = money(w[1]); } });
+      } else pEl.textContent = money(w[1]);
+      pEl.setAttribute('data-v', w[1]);
+      document.getElementById('c-pp').textContent = c.wagyu ? t('Degustación para {n}').replace('{n}', w[2]) : t('Para {n} personas').replace('{n}', w[2]) + t(' · incluye guarnición');
+    }
+    cutBtns.forEach(function (b) {
+      b.addEventListener('click', function () { cutI = +b.getAttribute('data-i'); wI = CUTS[cutI].def; renderCut(true); });
+    });
+    document.getElementById('c-book').addEventListener('click', function () {
+      piece = { c: cutI, w: wI };
+      price();
+    });
+
+    // ---------- Booking builder: builds the WhatsApp message ----------
+    var bf = document.getElementById('builder');
+    var fDate = document.getElementById('f-date');
+    var fHours = document.getElementById('f-hours');
+    var fFuego = document.getElementById('f-fuego');
+    var pax = 2;
+    function iso(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+    function parseISO(s) { var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+    function turno() { return (bf.querySelector('input[name=turno]:checked') || {}).value || 'cena'; }
+    function slots(d, tu) {
+      var s = shifts(d); if (!s.length) return [];
+      var sh = tu === 'comida' ? s[0] : s[1], out = [];
+      // Last table: an hour before lunch ends, 22:30 for dinner
+      var last = tu === 'comida' ? sh[1] - 60 : 1350;
+      for (var m = tu === 'comida' ? 780 : 1200; m <= last; m += 30) out.push(m);
+      return out;
+    }
+    (function initDate() {
+      var now = bcnNow(), d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      fDate.min = iso(d);
+      var max = new Date(d); max.setDate(max.getDate() + 90); fDate.max = iso(max);
+      var mins = now.getHours() * 60 + now.getMinutes();
+      if (d.getDay() === 2 || mins > 1320) { d.setDate(d.getDate() + 1); if (d.getDay() === 2) d.setDate(d.getDate() + 1); }
+      fDate.value = iso(d);
+      if (iso(d) === iso(now) && mins < 900) document.getElementById('tu-c').checked = true;
+    })();
+    var hourSel = null;
+    function buildHours() {
+      var d = fDate.value ? parseISO(fDate.value) : null;
+      var msg = document.getElementById('f-closed');
+      fHours.innerHTML = ''; msg.textContent = '';
+      if (!d) return;
+      var list = slots(d.getDay(), turno());
+      if (!list.length) { msg.textContent = t('Los martes descansamos. Elige otro día.'); hourSel = null; return; }
+      var now = bcnNow(), today = iso(now) === fDate.value, nm = now.getHours() * 60 + now.getMinutes();
+      if (today) list = list.filter(function (m) { return m > nm + 30; });
+      if (!list.length) { msg.textContent = t('Ese turno ya ha pasado. Elige otra hora o día.'); hourSel = null; return; }
+      if (hourSel === null || list.indexOf(hourSel) < 0) hourSel = turno() === 'cena' ? (list.indexOf(1260) > -1 ? 1260 : list[0]) : (list.indexOf(840) > -1 ? 840 : list[0]);
+      list.forEach(function (m, k) {
+        var id = 'h-' + m;
+        var inp = document.createElement('input'); inp.type = 'radio'; inp.name = 'hora'; inp.id = id; inp.value = m; inp.checked = m === hourSel;
+        var lb = document.createElement('label'); lb.htmlFor = id; lb.textContent = hm(m);
+        fHours.appendChild(inp); fHours.appendChild(lb);
+      });
+    }
+    function fmtDate(d) {
+      var loc = lang === 'ca' ? 'ca-ES' : lang === 'en' ? 'en-GB' : 'es-ES';
+      var s = d.toLocaleDateString(loc, { weekday: 'long', day: 'numeric', month: 'long' });
+      return s.charAt(0).toUpperCase() + s.slice(1);
+    }
+    function pieceText() { if (!piece) return ''; var c = CUTS[piece.c], w = c.w[piece.w]; return t(c.short).replace('{w}', grams(w[0])) + ' (' + money(w[1]) + ')'; }
+    function price() {
+      if (!bf) return;
+      var d = fDate.value ? parseISO(fDate.value) : null;
+      var when = d && hourSel !== null ? fmtDate(d) + ' · ' + hm(hourSel) : t('Elige día y hora');
+      document.getElementById('t-when').textContent = when;
+      document.getElementById('pax').textContent = pax;
+      document.getElementById('t-pax').textContent = pax;
+      var occ = (bf.querySelector('input[name=occ]:checked') || {}).value || '';
+      document.getElementById('r-occ').hidden = !occ;
+      document.getElementById('t-occ').textContent = t(occ);
+      var nF = Math.max(1, Math.floor(pax / 2));
+      document.getElementById('r-fuego').hidden = !fFuego.checked;
+      document.getElementById('t-fuego').textContent = t('Sí, {n} para la mesa').replace('{n}', nF);
+      var pc = pieceText();
+      document.getElementById('r-piece').hidden = !piece;
+      document.getElementById('t-piece').textContent = pc;
+      document.getElementById('f-piece').classList.toggle('on', !!piece);
+      document.getElementById('piece-t').textContent = pc;
+      var warn = pax >= 8 ? t('Para 8 o más os llamamos para cerrar el menú de grupo.') : (fFuego.checked && pax % 2 ? t('El Menú Fuego es para dos: os ponemos {n}.').replace('{n}', nF) : '');
+      document.getElementById('t-warn').textContent = warn;
+      var msg = t('¡Hola! Quiero reservar mesa en Petit Muu: {when}, {pax} personas.').replace('{when}', when).replace('{pax}', pax);
+      if (occ) msg += t(' Ocasión: {o}.').replace('{o}', t(occ));
+      if (fFuego.checked) msg += t(' Queremos {n} Menú Fuego.').replace('{n}', nF);
+      if (piece) msg += t(' Por favor, guardadnos: {p}.').replace('{p}', pc);
+      msg += t(' ¿Tenéis mesa?');
+      document.getElementById('t-wa').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+    }
+    fDate.addEventListener('change', function () { buildHours(); price(); });
+    bf.addEventListener('change', function (ev) {
+      if (ev.target.name === 'turno') { hourSel = null; buildHours(); }
+      if (ev.target.name === 'hora') hourSel = +ev.target.value;
+      price();
+    });
+    document.getElementById('pax-m').addEventListener('click', function () { pax = Math.max(1, pax - 1); price(); });
+    document.getElementById('pax-p').addEventListener('click', function () { pax = Math.min(30, pax + 1); price(); });
+    document.getElementById('piece-x').addEventListener('click', function () { piece = null; price(); });
+    // Offer buttons tick the Fire Menu; extras buttons preselect the occasion
+    document.querySelectorAll('[data-fuego]').forEach(function (a) { a.addEventListener('click', function () { fFuego.checked = true; price(); }); });
+    document.querySelectorAll('[data-occ]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var v = a.getAttribute('data-occ');
+        bf.querySelectorAll('input[name=occ]').forEach(function (r) { r.checked = r.value === v; });
+        if (v === 'Grupo o empresa' && pax < 8) pax = 8;
+        price();
+      });
+    });
+    function gift() { var g = document.getElementById('gift'); if (g) g.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(t('Hola, quiero una tarjeta regalo del Menú Fuego (69 € para dos). ¿Cómo lo hacemos?')); }
+    function finalLead() {
+      var el = document.getElementById('final-lead'), now = bcnNow(), s = shifts(now.getDay()), mins = now.getHours() * 60 + now.getMinutes();
+      var tonight = s.length && mins < 1410;
+      el.textContent = tonight ? t('Hoy cocinamos hasta las 23:30. Reserva en 30 segundos y ven con hambre.') : t('Reserva en 30 segundos y ven con hambre.');
+    }
+    function refresh() { updateOpen(); renderCut(false); buildHours(); price(); gift(); finalLead(); }
+
+    // Menu tabs: show one family at a time
+    var tabs = document.querySelectorAll('.tabs button');
+    var board = document.querySelector('.board');
+    tabs.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.getAttribute('data-f');
+        tabs.forEach(function (x) { x.setAttribute('aria-selected', String(x === b)); });
+        board.classList.remove('anim'); void board.offsetWidth; board.classList.add('anim');
+        document.querySelectorAll('.board .item').forEach(function (it) { it.hidden = it.getAttribute('data-k') !== f; });
+      });
+    });
+
+    var start = 'es';
+    try { start = localStorage.getItem('pm-lang') || ''; } catch (e) {}
+    if (!start) {
+      start = 'es';
+      var navs = navigator.languages || [navigator.language || ''];
+      for (var i = 0; i < navs.length; i++) { var c = (navs[i] || '').slice(0, 2).toLowerCase(); if (c === 'ca' || c === 'es' || c === 'en') { start = c; break; } }
+    }
+    if (start !== 'es') setLang(start); else refresh();
+    document.querySelectorAll('.lang button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); }); });
+
+    // Map: a click activates it, so the page scroll is never captured by the iframe
+    var mapWrap = document.querySelector('.map-wrap');
+    if (mapWrap) {
+      mapWrap.querySelector('.map-shield').addEventListener('click', function () { mapWrap.classList.add('live'); });
+      mapWrap.addEventListener('mouseleave', function () { mapWrap.classList.remove('live'); });
+    }
+
+    // Reveal on scroll
+    var els = document.querySelectorAll('.rv');
+    var top = document.getElementById('top');
+    var bar = document.querySelector('.bar');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+      els.forEach(function (el) { io.observe(el); });
+      new IntersectionObserver(function (e) { top.classList.toggle('scrolled', !e[0].isIntersecting); bar.classList.toggle('show', !e[0].isIntersecting); }).observe(document.querySelector('.hero .ctas'));
+    } else {
+      els.forEach(function (el) { el.classList.add('in'); });
+      bar.classList.add('show');
+    }
+
+    // Mobile menu
+    var btn = document.querySelector('.menu-btn'), mnav = document.getElementById('mnav');
+    btn.addEventListener('click', function () { var open = mnav.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+    mnav.addEventListener('click', function (e) { if (e.target.closest('a')) { mnav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); } });
+
+    // ---------- Hero sparks: embers rising from the grill ----------
+    (function () {
+      var cv = document.querySelector('.sparks');
+      if (!cv || !document.documentElement.classList.contains('motion') || !cv.getContext) return;
+      var ctx = cv.getContext('2d'), W = 0, H = 0, dpr = Math.min(2, window.devicePixelRatio || 1), P = [], vis = true;
+      function size() { W = cv.offsetWidth; H = cv.offsetHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+      function spawn(p) {
+        p.x = W * (.15 + Math.random() * .7); p.y = H + 10; p.vy = -(.35 + Math.random() * .9); p.vx = (Math.random() - .5) * .3;
+        p.r = .6 + Math.random() * 1.8; p.life = 0; p.max = 260 + Math.random() * 380; p.ph = Math.random() * 6.28; return p;
+      }
+      size(); window.addEventListener('resize', size);
+      var N = innerWidth < 700 ? 34 : 70;
+      for (var i = 0; i < N; i++) { var p = spawn({}); p.y = H * Math.random(); p.life = Math.random() * p.max; P.push(p); }
+      if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { vis = e[0].isIntersecting; }).observe(cv);
+      function frame() {
+        if (vis && !document.hidden) {
+          ctx.clearRect(0, 0, W, H);
+          ctx.globalCompositeOperation = 'lighter';
+          P.forEach(function (p) {
+            p.life++; p.ph += .05; p.x += p.vx + Math.sin(p.ph) * .25; p.y += p.vy;
+            var k = p.life / p.max, a = (k < .1 ? k * 10 : 1 - k) * .85;
+            if (k >= 1 || p.y < -10) spawn(p);
+            var g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 4);
+            g.addColorStop(0, 'rgba(255,200,120,' + a + ')'); g.addColorStop(.4, 'rgba(232,137,76,' + a * .5 + ')'); g.addColorStop(1, 'rgba(161,86,42,0)');
+            ctx.fillStyle = g; ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 4, 0, 6.283); ctx.fill();
+          });
+        }
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    })();
+
+    // ---------- Concave carousel ----------
+    // Cards sit on the inside of a cylinder around the viewer. Angle a = position on the ring
+    // relative to straight ahead; x = R·sin a, z = −R·cos a + shift, and each card turns −a to face the centre.
+    (function () {
+      var sec = document.getElementById('galeria');
+      var stage = sec && sec.querySelector('.htrack-wrap');
+      var ring = stage && stage.querySelector('.htrack');
+      if (!ring || !('requestAnimationFrame' in window)) return;
+      var cards = Array.prototype.slice.call(ring.querySelectorAll('figure'));
+      var N = cards.length, step = 360 / N, R = 0, shift = 0;
+      var cur = 0, scroll = 0, drag = 0;
+      var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var counter = sec.querySelector('.cc-n');
+      sec.classList.add('cc-on');
+      stage.setAttribute('tabindex', '0');
+      stage.setAttribute('role', 'region');
+      stage.setAttribute('aria-roledescription', 'carrusel');
+      function size() {
+        var cw = innerWidth < 700 ? Math.min(250, innerWidth * .6) : Math.max(230, Math.min(400, innerWidth * .26, innerHeight * .4));
+        stage.style.setProperty('--cw', cw + 'px');
+        R = N * (cw + 22) / (2 * Math.PI);
+        shift = R - cw * (innerWidth < 700 ? .5 : .35);
+      }
+      function norm(a) { return ((a + 180) % 360 + 360) % 360 - 180; }
+      function pad(n) { return (n < 10 ? '0' : '') + n; }
+      var last = -1, prev = 0, hold = 0, hover = false, inView = false;
+      var SPEED = 7;
+      function pause(ms) { hold = Math.max(hold, performance.now() + (ms || 3000)); }
+      var down = false, lx = 0, vx = 0, lt = 0, moved = 0;
+      function render(now) {
+        var dt = prev ? Math.min(64, now - prev) : 16; prev = now;
+        if (!reduce && inView && !down && !hover && now > hold && !document.hidden) drag -= SPEED * dt / 1000;
+        var target = scroll + drag;
+        cur += (target - cur) * (reduce ? 1 : .085);
+        if (Math.abs(target - cur) < .002) cur = target;
+        var front = ((Math.round(-cur / step) % N) + N) % N;
+        for (var i = 0; i < N; i++) {
+          var a = norm(i * step + cur), r = a * Math.PI / 180, v = Math.abs(a);
+          var c = cards[i];
+          c.style.transform = 'translate3d(' + (R * Math.sin(r)).toFixed(1) + 'px,0,' + (-R * Math.cos(r) + shift).toFixed(1) + 'px) rotateY(' + (-a).toFixed(2) + 'deg)';
+          c.style.opacity = v > 82 ? 0 : v > 60 ? ((82 - v) / 22).toFixed(3) : 1;
+          c.style.visibility = v > 84 ? 'hidden' : 'visible';
+          c.style.setProperty('--dim', Math.min(.6, v / 110).toFixed(3));
+        }
+        if (front !== last) {
+          cards.forEach(function (c, k) { c.classList.toggle('front', k === front); });
+          if (counter) counter.textContent = pad(front + 1) + ' / ' + pad(N);
+          last = front;
+        }
+        requestAnimationFrame(render);
+      }
+      function snap() { var total = scroll + drag; drag = Math.round(total / step) * step - scroll; }
+      function go(d) { snap(); drag += d * step; pause(4000); }
+      stage.addEventListener('pointerdown', function (e) {
+        if (e.button !== 0) return;
+        down = true; moved = 0; lx = e.clientX; vx = 0; lt = performance.now(); pause();
+        stage.classList.add('grabbing');
+      });
+      window.addEventListener('pointermove', function (e) {
+        if (!down) return;
+        var dx = e.clientX - lx, now = performance.now();
+        drag += dx * .11; moved += Math.abs(dx);
+        vx = dx / Math.max(1, now - lt); lx = e.clientX; lt = now;
+      });
+      function release(e) {
+        if (!down) return;
+        down = false; stage.classList.remove('grabbing');
+        if (moved < 6 && e && e.type === 'pointerup') {
+          var fig = e.target.closest && e.target.closest('figure');
+          var i = cards.indexOf(fig);
+          if (i > -1) drag -= norm(i * step + scroll + drag);
+        } else {
+          drag += vx * 14;
+        }
+        snap(); pause();
+      }
+      window.addEventListener('pointerup', release);
+      window.addEventListener('pointercancel', release);
+      stage.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') { go(1); e.preventDefault(); }
+        if (e.key === 'ArrowRight') { go(-1); e.preventDefault(); }
+      });
+      sec.querySelector('.cc-prev').addEventListener('click', function () { go(1); });
+      sec.querySelector('.cc-next').addEventListener('click', function () { go(-1); });
+      stage.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') hover = true; });
+      stage.addEventListener('pointerleave', function () { hover = false; });
+      stage.addEventListener('focusin', function () { hover = true; });
+      stage.addEventListener('focusout', function () { hover = false; });
+      if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { inView = en[0].isIntersecting; }).observe(stage); else inView = true;
+      size();
+      window.addEventListener('resize', size);
+      requestAnimationFrame(render);
+    })();
+
+    // ---------- Motion layer ----------
+    // Runs only when html.motion is set (motion allowed) and GSAP loaded. Otherwise the page stays static and complete.
+    var root = document.documentElement;
+    var intro = document.querySelector('.intro');
+    var h1 = document.querySelector('.hero h1');
+    function staticPage() {
+      root.classList.remove('motion');
+      if (intro) intro.remove();
+      document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); });
+    }
+    if (!root.classList.contains('motion')) return;
+    if (!window.gsap || !window.ScrollTrigger) { staticPage(); return; }
+    gsap.registerPlugin(ScrollTrigger);
+    var ease = 'expo.out';
+
+    var lenis = null;
+    if (window.Lenis) {
+      lenis = new Lenis({ lerp: 0.09, smoothWheel: true, wheelMultiplier: 1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add(function (tm) { lenis.raf(tm * 1000); });
+      gsap.ticker.lagSmoothing(0);
+      document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var id = a.getAttribute('href');
+          var target = id.length > 1 && document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          lenis.scrollTo(target, { offset: -72, duration: 1.4 });
+        });
+      });
+    }
+
+    function split(el) {
+      var walk = function (node) {
+        Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+          if (n.nodeType === 3) {
+            var frag = document.createDocumentFragment();
+            n.textContent.split(/(\s+)/).forEach(function (part) {
+              if (!part) return;
+              if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
+              var w = document.createElement('span'); w.className = 'w';
+              var i = document.createElement('span'); i.textContent = part;
+              w.appendChild(i); frag.appendChild(w);
+            });
+            n.parentNode.replaceChild(frag, n);
+          } else if (n.nodeType === 1) { walk(n); }
+        });
+      };
+      el.setAttribute('aria-label', el.textContent.trim());
+      walk(el);
+      return el.querySelectorAll('.w > span');
+    }
+
+    // Intro curtain, then the headline rises word by word
+    h1.classList.remove('rv');
+    var h1Words = split(h1);
+    gsap.set(h1Words, { yPercent: 115 });
+    var heroBits = document.querySelectorAll('.hero .eyebrow, .hero .lead, .hero .ctas, .hero .rating');
+    heroBits.forEach(function (el) { el.classList.remove('rv'); });
+    gsap.set(heroBits, { opacity: 0, y: 24 });
+    gsap.set('.trio .t1, .trio .t2 img, .trio .t3', { opacity: 0, y: 70 });
+    var tl = gsap.timeline({ defaults: { ease: ease } });
+    if (intro) {
+      tl.to('.intro img', { opacity: 1, scale: 1, duration: .7, ease: 'power2.out' })
+        .to('.intro .bar-load i', { scaleX: 1, duration: .8, ease: 'power2.inOut' }, '<')
+        .to(intro, { yPercent: -100, duration: 1, ease: 'expo.inOut' }, '+=.1')
+        .set(intro, { display: 'none' });
+    }
+    tl.to(heroBits[0], { opacity: 1, y: 0, duration: 1 }, intro ? '-=.55' : 0)
+      .to(h1Words, { yPercent: 0, duration: 1.2, stagger: .07 }, '<.05')
+      .to([heroBits[1], heroBits[2], heroBits[3]], { opacity: 1, y: 0, duration: 1, stagger: .1 }, '-=.8')
+      .to('.trio .t2 img', { opacity: 1, y: 0, duration: 1.3 }, '<.1')
+      .to('.trio .t1, .trio .t3', { opacity: 1, y: 0, duration: 1.3, stagger: .08 }, '<.12');
+    setTimeout(function () { if (intro && intro.parentNode) intro.style.display = 'none'; }, 4500);
+
+    var mm = gsap.matchMedia();
+
+    // Hero stage (desktop): side photos step aside, the centre photo opens to full screen
+    mm.add('(min-width: 900px)', function () {
+      var hero = document.querySelector('.hero');
+      var t2 = document.querySelector('.trio .t2');
+      function cover() {
+        var h = hero.getBoundingClientRect(), r = t2.getBoundingClientRect();
+        var s = Math.max(innerWidth / r.width, innerHeight / r.height) * 1.02;
+        return { s: s, x: innerWidth / 2 - (r.left + r.width / 2), y: innerHeight / 2 - (r.top - h.top + r.height / 2) };
+      }
+      var c = cover();
+      ScrollTrigger.addEventListener('refreshInit', function () { gsap.set(t2, { clearProps: 'transform' }); c = cover(); });
+      var st = gsap.timeline({ scrollTrigger: { trigger: hero, start: 'top top', end: '+=140%', scrub: 1, pin: true, anticipatePin: 1, invalidateOnRefresh: true, refreshPriority: 2 } });
+      var ir = { immediateRender: false, ease: 'none' };
+      st.fromTo('.hero-copy', { y: 0, opacity: 1 }, Object.assign({ y: -90, opacity: 0, duration: .5 }, ir), 0)
+        .fromTo('.sparks', { opacity: 1 }, Object.assign({ opacity: .35, duration: .5 }, ir), 0)
+        .fromTo('.trio .t1', { xPercent: 0, autoAlpha: 1 }, Object.assign({ xPercent: -40, autoAlpha: 0, duration: .5 }, ir), 0)
+        .fromTo('.trio .t3', { xPercent: 0, autoAlpha: 1 }, Object.assign({ xPercent: 40, autoAlpha: 0, duration: .5 }, ir), 0)
+        .fromTo(t2, { x: 0, y: 0, scale: 1, borderRadius: 24 }, { x: function () { return c.x; }, y: function () { return c.y; }, scale: function () { return c.s; }, borderRadius: 0, immediateRender: false, ease: 'power1.inOut', duration: 1 }, 0)
+        .fromTo('.trio .t2 .veil', { opacity: 0 }, Object.assign({ opacity: 1, duration: .4 }, ir), .6)
+        .fromTo('.stage-cap p', { opacity: 0, y: 30 }, Object.assign({ opacity: 1, y: 0, duration: .35 }, ir), .7)
+        .to({}, { duration: .3 });
+    });
+
+    // Headings: masked word reveal
+    document.querySelectorAll('main h2').forEach(function (h) {
+      h.classList.remove('rv');
+      var words = split(h);
+      gsap.from(words, { yPercent: 115, duration: 1.1, ease: ease, stagger: .05, scrollTrigger: { trigger: h, start: 'top 88%' } });
+    });
+
+    // Numbers count up (decimals with a comma, or a dot in English)
+    document.querySelectorAll('[data-count]').forEach(function (el) {
+      var end = +el.getAttribute('data-count'), dec = +(el.getAttribute('data-dec') || 0), o = { v: 0 };
+      var fmt = function (v) { var s = v.toFixed(dec); return lang === 'en' ? s : s.replace('.', ','); };
+      el.textContent = fmt(0);
+      gsap.to(o, { v: end, duration: 1.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%' }, onUpdate: function () { el.textContent = fmt(o.v); } });
+    });
+
+    // Menú Fuego: the step in the middle of the screen lights up and swaps the photo
+    var items = document.querySelectorAll('.story-steps li');
+    var frames = document.querySelectorAll('.frame img');
+    var count = document.querySelector('.frame .count b');
+    function show(i) {
+      items.forEach(function (li, k) { li.classList.toggle('on', k === i); });
+      var f = +items[i].getAttribute('data-img');
+      frames.forEach(function (im, k) { im.classList.toggle('on', k === f); });
+      if (count) count.textContent = '0' + (i + 1);
+    }
+    show(0);
+    items.forEach(function (li, i) {
+      ScrollTrigger.create({ trigger: li, start: 'top 60%', end: 'bottom 60%', onToggle: function (self) { if (self.isActive) show(i); } });
+    });
+
+    // Cachopo: the close-up drifts against the main photo
+    gsap.fromTo('.star-media .small', { yPercent: 18 }, { yPercent: -14, ease: 'none', scrollTrigger: { trigger: '.star-media', start: 'top bottom', end: 'bottom top', scrub: true } });
+    gsap.fromTo('.stamp', { rotate: -24, scale: .8 }, { rotate: -8, scale: 1, ease: 'none', scrollTrigger: { trigger: '.star-media', start: 'top bottom', end: 'center center', scrub: true } });
+
+    // Full-bleed scene: the frame opens, the photo settles
+    gsap.fromTo('.scene', { clipPath: 'inset(6% 5% 0% 5% round 24px)' }, { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', scrollTrigger: { trigger: '.scene', start: 'top bottom', end: 'top 15%', scrub: true } });
+    gsap.fromTo('.scene > img', { scale: 1.22 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.scene', start: 'top bottom', end: 'bottom top', scrub: true } });
+    gsap.fromTo('.final > img', { scale: 1.15 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.final', start: 'top bottom', end: 'bottom top', scrub: true } });
+
+    // La Cámara photo: slow push-in
+    gsap.fromTo('.cut-photo', { scale: .94 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.camara', start: 'top bottom', end: 'center center', scrub: true } });
+
+    // Ticker leans with scroll speed
+    var row = document.querySelector('.ticker .row');
+    ScrollTrigger.create({ start: 0, end: 'max', onUpdate: function (self) { var v = gsap.utils.clamp(-12, 12, self.getVelocity() / 220); gsap.to(row, { skewX: -v, duration: .4, ease: 'power3.out', overwrite: true }); } });
+
+    // Chapter rail
+    var rail = document.querySelector('.rail');
+    if (rail) {
+      var pct = rail.querySelector('.pct');
+      ScrollTrigger.create({ start: 0, end: 'max', onUpdate: function (self) { pct.textContent = Math.round(self.progress * 100) + '%'; rail.classList.toggle('show', self.progress > 0.05 && self.progress < 0.97); } });
+      rail.querySelectorAll('a').forEach(function (a) {
+        var sec = document.querySelector(a.getAttribute('href'));
+        if (!sec) return;
+        ScrollTrigger.create({ trigger: sec, start: 'top 55%', end: 'bottom 55%', onToggle: function (self) { if (self.isActive) { rail.querySelectorAll('a').forEach(function (x) { x.classList.toggle('on', x === a); }); } } });
+      });
+    }
+
+    window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+  })();
+</script>
+
+</body>
+</html>
